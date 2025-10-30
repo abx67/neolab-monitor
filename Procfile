@@ -1,0 +1,1 @@
+worker: python ai_jobs_scraper.py --schedule
