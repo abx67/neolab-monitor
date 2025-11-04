@@ -37,8 +37,13 @@ env.bak/
 venv.bak/
 *_venv/
 
-# Job history files (optional - you might want to keep these)
+# Generated output files
 *_jobs_history.json
+ai_research_jobs.txt
+*_jobs.txt
+
+# GitHub token file (if using local file method)
+.github_token
 
 # IDE
 .vscode/

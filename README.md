@@ -1,173 +1,253 @@
-# 🤖 AI Jobs Scraper - Research Engineer Positions
+# 🤖 AI Jobs Scraper
 
-A Python web scraper that monitors multiple AI companies' careers pages (Anthropic, OpenAI) for research engineer positions and can send daily email updates with new job listings.
+A Python script that scrapes AI research engineer job postings from multiple companies and sends daily email updates with new positions. **Completely free deployment** on Heroku with persistent job history using GitHub Gist storage.
 
-## ✨ Features
+## 🎯 Features
 
-- **Smart Filtering**: Finds research engineer positions using keyword matching
-- **Blacklist Support**: Excludes unwanted job types (Safeguards, Recruiting, Operations, Management, etc.)
-- **Email Notifications**: Send beautiful HTML email reports with job listings
-- **New Job Detection**: Tracks and highlights newly posted positions
-- **Daily Scheduling**: Run automatically once per day
-- **Multiple Output Formats**: Console output, text file, and email
+- **Multi-Company Support**: Scrapes Anthropic, OpenAI, DeepMind, X.ai, ByteDance Seed, Thinking Machines
+- **Smart Filtering**: Focuses on research engineer and scientist positions
+- **Persistent History**: Tracks jobs across Heroku restarts using GitHub Gist (free)
+- **New Job Detection**: Only highlights truly new positions (no more false positives!)
+- **Email Notifications**: Sends formatted HTML emails with job updates
+- **Zero Cost**: Runs completely free on Heroku with no paid addons required
 
-## 🚀 Quick Start
+## 🚀 Quick Deploy to Heroku (Free)
 
-### 1. Install Dependencies
+### Prerequisites
+- Heroku account (free)
+- GitHub account (free) 
+- 5 minutes setup time
+
+### 1. Get GitHub Token
 ```bash
-pip install requests beautifulsoup4 lxml schedule python-dotenv
+# Go to: https://github.com/settings/tokens
+# Create new token with 'gist' permission only
+# Copy the token (starts with ghp_)
 ```
 
-### 2. Configure Email (Optional)
-Edit the `.env` file with your email settings:
-```
-SMTP_SERVER=smtp.gmail.com
-SMTP_PORT=587
-SENDER_EMAIL=your_email@gmail.com
-SENDER_PASSWORD=your_app_password
-RECIPIENT_EMAIL=recipient@example.com
-```
-
-**For Gmail users:**
-1. Enable 2-factor authentication
-2. Generate an App Password: https://support.google.com/accounts/answer/185833
-3. Use the App Password in the `SENDER_PASSWORD` field
-
-### 3. Run the Scraper
-
-**Run once (no email):**
+### 2. Deploy to Heroku
 ```bash
-python3 ai_jobs_scraper.py
+# Clone and deploy
+git clone <this-repo>
+cd job_scraper
+
+# Create Heroku app
+heroku create your-app-name
+
+# Set GitHub token for persistent storage
+heroku config:set GITHUB_TOKEN=ghp_your_token_here
+
+# Optional: Set email notifications  
+heroku config:set SENDER_EMAIL=your-email@gmail.com
+heroku config:set SENDER_PASSWORD=your-app-password
+heroku config:set RECIPIENT_EMAIL=recipient@gmail.com
+
+# Deploy
+git push heroku main
 ```
 
-**Run once with email:**
+### 3. Schedule Daily Runs
 ```bash
-python3 ai_jobs_scraper.py --email
+# Add free scheduler
+heroku addons:create scheduler:standard
+
+# Open scheduler dashboard
+heroku addons:open scheduler
+
+# Add job in web interface:
+# Command: python ai_jobs_scraper.py --email  
+# Frequency: Daily at 9:00 AM UTC
 ```
 
-**Run daily with email notifications:**
+## 💰 Cost Breakdown
+- **Heroku App**: FREE
+- **GitHub Gist Storage**: FREE  
+- **Scheduler**: FREE
+- **Total**: $0/month 🎉
+
+## 🔧 Local Development
+
+### Setup
 ```bash
-python3 ai_jobs_scraper.py --schedule
+pip install -r requirements.txt
+
+# Optional: Set GitHub token for persistent history
+export GITHUB_TOKEN=ghp_your_token_here
 ```
 
-## 📧 Email Features
-
-- **HTML Format**: Beautiful, responsive email layout
-- **New Job Highlighting**: New positions are highlighted in green
-- **Direct Apply Links**: Click to apply directly from the email
-- **Location Information**: Clear location details for each position
-- **Summary Statistics**: Total positions and new job counts
-
-## 🎯 Filtering Logic
-
-### Included Keywords:
-- research engineer
-- research scientist/engineer
-- machine learning engineer
-- staff research engineer
-- senior research engineer
-- AI research
-- And more...
-
-### Blacklisted Keywords (Excluded):
-- safeguards
-- recruit
-- operation
-- manager
-- biology
-- scaling
-- honesty
-- education
-
-## 🕐 Scheduling Options
-
-### Option 1: Built-in Scheduler
+### Run Commands
 ```bash
-python3 ai_jobs_scraper.py --schedule
-```
-Runs daily at 9:00 AM. Keep the terminal open or run in background.
+# Run once (console output only)
+python ai_jobs_scraper.py
 
-### Option 2: Cron Job (Linux/Mac)
+# Run with email notifications
+python ai_jobs_scraper.py --email
+
+# Run with built-in scheduling (for testing)
+python ai_jobs_scraper.py --schedule
+```
+
+## � How Persistent Storage Works
+
+### The Problem (Before)
+```
+Day 1: Scrape 15 jobs → All marked "NEW" ✨
+Heroku restart (every 24h) → History file lost 
+Day 2: Same 15 jobs → All marked "NEW" again ❌
+```
+
+### The Solution (After)  
+```
+Day 1: Scrape 15 jobs → All marked "NEW" ✨ → Save to GitHub Gist
+Heroku restart → Gist persists in cloud ☁️
+Day 2: Same 15 jobs → Load from Gist → 0 marked "NEW" ✅
+Day 3: 1 new job appears → Only that 1 marked "NEW" ✅
+```
+
+## 🏢 Supported Companies
+
+| Company | Jobs Scraped | Method |
+|---------|--------------|--------|
+| **Anthropic** | Research positions | HTML scraping |
+| **OpenAI** | Research positions | Ashby API |
+| **DeepMind** | All positions | Greenhouse API |
+| **X.ai** | All positions | Greenhouse API |
+| **ByteDance Seed** | Research positions | Multi-page scraping |
+| **Thinking Machines** | All positions | Greenhouse API |
+
+## 📧 Email Output Example
+
+```html
+🤖 AI Research Engineer Jobs Update
+📅 2024-11-04 | 📊 Total: 23 positions | 🆕 New: 2
+
+🆕 NEW JOBS (2)
+├─ OpenAI: AI Safety Engineer (San Francisco)
+└─ Anthropic: Research Engineer (Remote)
+
+📋 ALL POSITIONS BY COMPANY
+🏢 OPENAI - 8 positions
+├─ Research Engineer
+├─ Senior Research Scientist  
+├─ AI Safety Engineer 🆕
+└─ ...
+
+🏢 ANTHROPIC - 6 positions  
+├─ Constitutional AI Research Engineer 🆕
+├─ Research Scientist
+└─ ...
+```
+
+## �️ Configuration
+
+### Required (for persistence)
 ```bash
-crontab -e
-# Add this line to run daily at 9:00 AM:
-0 9 * * * cd /path/to/scraper && python3 ai_jobs_scraper.py --email
+GITHUB_TOKEN=ghp_your_token_here  # GitHub personal access token
 ```
 
-### Option 3: Task Scheduler (Windows)
-Create a Windows Task Scheduler job to run the scraper daily.
-
-## 📁 Output Files
-
-- `ai_research_jobs.txt` - Text format results
-- `ai_jobs_history.json` - Job history for new job detection
-- `.env` - Email configuration (create from `.env.example`)
-
-## 🛠️ Setup Script
-
-Run the automated setup:
+### Optional (for email)  
 ```bash
-./setup_scraper.sh
+SENDER_EMAIL=your-email@gmail.com
+SENDER_PASSWORD=your-app-password
+RECIPIENT_EMAIL=recipient@gmail.com
 ```
 
-This will:
-- Create email configuration file
-- Test email setup
-- Provide usage instructions
+### Gmail Setup
+1. Enable 2FA on Gmail
+2. Generate App Password: https://myaccount.google.com/apppasswords  
+3. Use app password (not regular Gmail password)
 
-## 📈 Current Results
+## 📁 Project Structure
 
-The scraper typically finds **30+ research engineer positions** across both companies, including:
+```
+job_scraper/
+├── 📄 ai_jobs_scraper.py     # Main scraper with all company integrations
+├── 📄 simple_storage.py      # GitHub Gist storage for persistence  
+├── � requirements.txt       # Python dependencies
+├── 📄 Procfile              # Heroku configuration
+├── 📄 runtime.txt           # Python version
+├── 📄 GITHUB_TOKEN_GUIDE.md # Setup instructions
+└── � README.md             # This file
+```
 
-### **Anthropic (15 positions):**
+## 🔍 Job Filtering Logic
 
-- **Core Research**: Interpretability, Multimodal, Pre-training
-- **AI Safety**: Alignment Science, Model Welfare, Reward Models
-- **Specialized**: Machine Learning (Horizons), Model Performance
-
-### **OpenAI (17 positions):**
-- **Core Research**: Human Data, Human-Centered AI, Retrieval & Search
-- **Safety Systems**: Health AI, Interpretability, Safety Oversight, Trustworthy AI
-- **Advanced Research**: RL/Reasoning, Training, Future of Computing
-- **Leadership Roles**: Lead Research Engineer positions
-
-### **Locations**: 
-Primarily San Francisco, NYC, London, Seattle, Remote options
-
-## 🔧 Customization
-
-### Adding Keywords
-Edit the `research_keywords` list in the `filter_research_engineer_jobs` method.
-
-### Modifying Blacklist
-Edit the `blacklist_keywords` list to exclude different job types.
-
-### Changing Schedule
-Modify the schedule time in the `main()` function:
+### Included Keywords
 ```python
-schedule.every().day.at("09:00").do(run_daily_scraper)
+research_keywords = [
+    'research engineer', 'research scientist',
+    'machine learning engineer', 'ml engineer', 
+    'ai research', 'staff research engineer',
+    'member of technical staff'
+]
 ```
 
-## 🐛 Troubleshooting
+### Excluded Keywords (to filter out non-research roles)
+```python
+blacklist_keywords = [
+    'recruiter', 'sales', 'marketing', 'business',
+    'security', 'legal', 'finance', 'manager'
+]
+```
 
-**Email not working?**
-- Check your email credentials in `.env`
-- For Gmail, ensure you're using an App Password
-- Verify SMTP settings for your email provider
+## � Troubleshooting
 
-**No jobs found?**
-- Check your internet connection
-- The website structure may have changed
-- Review the filtering keywords
+### Storage Issues
+```bash
+# Check if GitHub token is set
+heroku config -a your-app-name
 
-**Scheduling issues?**
-- Ensure the script keeps running for scheduled jobs
-- Consider using system-level scheduling (cron/Task Scheduler)
+# View logs for gist creation
+heroku logs --tail -a your-app-name
+
+# Look for: "Created new gist: abc123..."
+# Then set: heroku config:set GITHUB_GIST_ID=abc123
+```
+
+### Email Issues
+```bash
+# Test email locally
+python ai_jobs_scraper.py --email
+
+# Common fixes:
+# - Use Gmail app password, not regular password
+# - Check spam folder
+# - Verify environment variables are set
+```
+
+### Heroku Issues  
+```bash
+# View recent logs
+heroku logs --lines=100 -a your-app-name
+
+# Restart app
+heroku restart -a your-app-name
+
+# Check config
+heroku config -a your-app-name
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch: `git checkout -b new-feature`
+3. Test changes locally
+4. Submit pull request
+
+### Adding New Companies
+Extend the scraper by adding new company classes following the existing patterns.
+
+## ⚖️ Legal & Ethics
+
+- Respects robots.txt and rate limits
+- Only scrapes publicly available job listings  
+- No personal data collection
+- Educational and personal use
 
 ## 📝 License
 
-This project is for educational and personal use only. Please respect Anthropic's website terms of service and don't overload their servers.
+MIT License - See LICENSE file for details.
 
 ---
 
-**Happy job hunting! 🚀**
+🎯 **Result**: Never miss a new AI research job opening again, with zero monthly costs!

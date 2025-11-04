@@ -26,6 +26,14 @@ from urllib.parse import urljoin
 # On Heroku, environment variables are automatically available
 load_dotenv()
 
+# Import GitHub Gist storage for persistent job history
+try:
+    from simple_storage import get_simple_storage
+    SIMPLE_STORAGE_AVAILABLE = True
+except ImportError:
+    print("⚠️ Simple storage not available. Using file-based storage.")
+    SIMPLE_STORAGE_AVAILABLE = False
+
 
 class JobScraper:
     """Base class for job scrapers."""
@@ -620,8 +628,25 @@ class MultiCompanyJobsScraper:
             print("⚠️  Warning: Email configuration incomplete. Email notifications will be disabled.")
             print("   Required environment variables: SENDER_EMAIL, SENDER_PASSWORD, RECIPIENT_EMAIL")
         
-        # File to store previous job listings
+        # Storage configuration
         self.jobs_history_file = "ai_jobs_history.json"
+        
+        # Initialize storage backend (GitHub Gist or file storage)
+        self.external_storage = None
+        
+        # Try GitHub Gist storage (free with GitHub account)
+        if SIMPLE_STORAGE_AVAILABLE:
+            try:
+                self.external_storage = get_simple_storage()
+                if self.external_storage:
+                    print("✅ Using GitHub Gist storage for job history")
+            except Exception as e:
+                print(f"⚠️ GitHub Gist storage failed: {e}")
+        
+        # Fallback to file storage (will be lost on Heroku)
+        if not self.external_storage:
+            print("📝 Using file-based storage for job history (will be lost on Heroku restarts)")
+            print("💡 For persistent storage, set up GitHub token (see GITHUB_TOKEN_GUIDE.md)")
     
     def filter_research_engineer_jobs(self, jobs: List[Dict[str, str]]) -> List[Dict[str, str]]:
         """Filter jobs to find research engineer related positions."""
@@ -744,22 +769,34 @@ class MultiCompanyJobsScraper:
         return all_jobs
     
     def load_previous_jobs(self) -> Dict[str, List[Dict[str, str]]]:
-        """Load previously found jobs from history file."""
-        try:
-            if os.path.exists(self.jobs_history_file):
-                with open(self.jobs_history_file, 'r', encoding='utf-8') as f:
-                    return json.load(f)
-        except Exception as e:
-            print(f"Error loading job history: {e}")
-        return {}
+        """Load previously found jobs from GitHub Gist or local file."""
+        # Try external storage first (GitHub Gist)
+        if self.external_storage:
+            return self.external_storage.load_previous_jobs()
+        
+        # Fallback to file-based storage
+        else:
+            try:
+                if os.path.exists(self.jobs_history_file):
+                    with open(self.jobs_history_file, 'r', encoding='utf-8') as f:
+                        return json.load(f)
+            except Exception as e:
+                print(f"Error loading job history: {e}")
+            return {}
     
     def save_jobs_history(self, jobs: Dict[str, List[Dict[str, str]]]) -> None:
-        """Save current jobs to history file."""
-        try:
-            with open(self.jobs_history_file, 'w', encoding='utf-8') as f:
-                json.dump(jobs, f, indent=2, ensure_ascii=False)
-        except Exception as e:
-            print(f"Error saving job history: {e}")
+        """Save current jobs to GitHub Gist or local file."""
+        # Try external storage first (GitHub Gist)
+        if self.external_storage:
+            self.external_storage.save_jobs_history(jobs)
+        
+        # Fallback to file-based storage
+        else:
+            try:
+                with open(self.jobs_history_file, 'w', encoding='utf-8') as f:
+                    json.dump(jobs, f, indent=2, ensure_ascii=False)
+            except Exception as e:
+                print(f"Error saving job history: {e}")
     
     def find_new_jobs(self, current_jobs: Dict[str, List[Dict[str, str]]], 
                      previous_jobs: Dict[str, List[Dict[str, str]]]) -> Dict[str, List[Dict[str, str]]]:
