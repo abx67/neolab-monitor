@@ -941,9 +941,10 @@ class MultiCompanyJobsScraper:
         try:
             # Create message
             msg = MIMEMultipart('alternative')
-            msg['Subject'] = f"🤖 AI Research Jobs - {total_jobs} positions"
+            subject = f"🤖 AI Research Jobs - {total_jobs} positions"
             if total_new > 0:
-                msg['Subject'] += f" ({total_new} new!)"
+                subject += f" ({total_new} new!)"
+            msg['Subject'] = subject
             msg['From'] = self.sender_email
             msg['To'] = self.recipient_email
             
