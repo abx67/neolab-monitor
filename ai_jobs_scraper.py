@@ -93,38 +93,48 @@ class AnthropicScraper(JobScraper):
     def extract_jobs(self, soup: BeautifulSoup) -> List[Dict[str, str]]:
         """Extract job listings from Anthropic page."""
         jobs = []
+        debug_mode = os.getenv("SCRAPER_DEBUG", "").lower() in ("1", "true", "yes", "on")
+        max_debug_samples = 5
         
-        # Look for job titles - they appear to be in h3 tags
-        job_elements = soup.find_all('h3')
-        
-        for job_element in job_elements:
-            job_title = job_element.get_text(strip=True)
+        # New site renders job cards as Greenhouse links inside anchor tags
+        job_elements = soup.find_all('a', href=re.compile(r'job-boards\.greenhouse\.io/anthropic/jobs'))
+
+        print(f"   Found {len(job_elements)} job elements to process")
+        if debug_mode:
+            print(f"   Debug mode on: showing up to {max_debug_samples} raw elements")
+        for idx, job_element in enumerate(job_elements):
+            if debug_mode and idx < max_debug_samples:
+                # Debug: show the raw element so we can update selectors after site changes
+                raw_element = job_element.prettify() if hasattr(job_element, "prettify") else str(job_element)
+                snippet = raw_element[:600].replace("\n", " ")
+                print(f"   Raw job element #{idx}: {snippet}{'...' if len(raw_element) > 600 else ''}")
+
+            # Title lives in the role block inside the anchor
+            title_elem = job_element.find(class_=re.compile('jobRole'))
+            job_title = title_elem.get_text(strip=True) if title_elem else job_element.get_text(strip=True)
+            if debug_mode:
+                print(f"   Processing job title: {job_title}")
             
             # Skip if it's not a proper job title
             if not job_title or len(job_title) < 5:
                 continue
                 
-            # Find the location
+            # Location block inside the anchor
             location = ""
-            location_element = job_element.find_next_sibling()
-            if location_element:
-                location_text = location_element.get_text(strip=True)
-                # Check if this looks like a location
-                if any(pattern in location_text.lower() for pattern in ['ca', 'ny', 'wa', 'uk', 'dc', 'remote', 'japan', 'germany', 'france']):
-                    location = location_text
+            location_elem = job_element.find(class_=re.compile('jobLocation'))
+            if location_elem:
+                location_text = location_elem.get_text(strip=True)
+                location = location_text
             
-            # Find the application link
-            apply_link = ""
-            apply_element = job_element.find_next('a', string=re.compile(r'Apply Now', re.I))
-            if apply_element and apply_element.get('href'):
-                apply_link = apply_element['href']
+            # The anchor itself is the apply link
+            apply_link = job_element.get('href', '')
             
             jobs.append({
                 'title': job_title,
                 'location': location,
                 'apply_link': apply_link
             })
-        
+        print(f"   Extracted {len(jobs)} jobs from Anthropic page")
         return jobs
 
 
@@ -812,6 +822,22 @@ class MultiCompanyJobsScraper:
                 new_jobs[company] = company_new_jobs
         
         return new_jobs
+
+    def find_removed_jobs(self, current_jobs: Dict[str, List[Dict[str, str]]], 
+                          previous_jobs: Dict[str, List[Dict[str, str]]]) -> Dict[str, List[Dict[str, str]]]:
+        """Find jobs that were present previously but are now removed."""
+        removed_jobs: Dict[str, List[Dict[str, str]]] = {}
+
+        # Iterate through companies that had previous jobs
+        for company, prev_jobs in previous_jobs.items():
+            current_company_jobs = current_jobs.get(company, [])
+            current_titles = {job['title'] for job in current_company_jobs}
+
+            company_removed = [job for job in prev_jobs if job.get('title') not in current_titles]
+            if company_removed:
+                removed_jobs[company] = company_removed
+
+        return removed_jobs
     
     def display_jobs(self, all_jobs: Dict[str, List[Dict[str, str]]], 
                     new_jobs: Dict[str, List[Dict[str, str]]] = None) -> None:
@@ -844,10 +870,12 @@ class MultiCompanyJobsScraper:
                     print()
     
     def create_email_content(self, all_jobs: Dict[str, List[Dict[str, str]]], 
-                           new_jobs: Dict[str, List[Dict[str, str]]] = None) -> str:
+                           new_jobs: Dict[str, List[Dict[str, str]]] = None,
+                           removed_jobs: Dict[str, List[Dict[str, str]]] = None) -> str:
         """Create HTML email content with job listings."""
         total_jobs = sum(len(jobs) for jobs in all_jobs.values())
         total_new = sum(len(jobs) for jobs in new_jobs.values()) if new_jobs else 0
+        total_removed = sum(len(jobs) for jobs in removed_jobs.values()) if removed_jobs else 0
         
         html_content = f"""
         <html>
@@ -859,6 +887,7 @@ class MultiCompanyJobsScraper:
                 <strong>Date:</strong> {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}<br>
                 <strong>Total Positions:</strong> {total_jobs}
                 {f'<br><strong>🆕 New Positions:</strong> {total_new}' if total_new > 0 else ''}
+                {f'<br><strong>❎ Removed Positions:</strong> {total_removed}' if total_removed > 0 else ''}
             </p>
         """
         
@@ -884,6 +913,30 @@ class MultiCompanyJobsScraper:
                         </div>
                         """
             
+            html_content += "</div>"
+
+        # Show removed jobs if any
+        if removed_jobs and total_removed > 0:
+            html_content += f"""
+            <div style="background-color: #fdecea; padding: 15px; border-radius: 5px; margin: 20px 0;">
+                <h3 style="color: #c0392b; margin-top: 0;">❎ Removed Jobs ({total_removed})</h3>
+            """
+
+            for company, jobs in removed_jobs.items():
+                if jobs:
+                    html_content += f"""
+                    <h4 style="color: #2c3e50; margin: 15px 0 10px 0;">🏢 {company}</h4>
+                    """
+
+                    for job in jobs:
+                        html_content += f"""
+                        <div style="background-color: #ffffff; padding: 10px; margin: 10px 0; border-radius: 3px; border-left: 4px solid #c0392b;">
+                            <h5 style="color: #2c3e50; margin: 0 0 5px 0;">{job.get('title', 'Unknown Title')}</h5>
+                            <p style="margin: 5px 0; color: #7f8c8d;">📍 {job.get('location', 'Unknown')}</p>
+                            {f'<span style="color: #c0392b;">This role no longer appears on the board.</span>'}
+                        </div>
+                        """
+
             html_content += "</div>"
         
         # Show all jobs by company
@@ -919,7 +972,7 @@ class MultiCompanyJobsScraper:
             <hr style="margin: 30px 0; border: none; border-top: 1px solid #bdc3c7;">
             <p style="color: #95a5a6; font-size: 12px; text-align: center;">
                 This email was automatically generated by the AI Jobs Scraper<br>
-                Monitoring: Anthropic • OpenAI<br>
+                Monitoring: Anthropic • OpenAI • DeepMind • X.ai • ByteDance Seed • Thinking Machines<br>
                 If you no longer wish to receive these updates, please update your configuration.
             </p>
         </body>
@@ -929,7 +982,8 @@ class MultiCompanyJobsScraper:
         return html_content
     
     def send_email(self, all_jobs: Dict[str, List[Dict[str, str]]], 
-                  new_jobs: Dict[str, List[Dict[str, str]]] = None) -> bool:
+                  new_jobs: Dict[str, List[Dict[str, str]]] = None,
+                  removed_jobs: Dict[str, List[Dict[str, str]]] = None) -> bool:
         """Send email with job listings."""
         if not all([self.sender_email, self.sender_password, self.recipient_email]):
             print("❌ Email configuration incomplete. Please set up environment variables.")
@@ -937,6 +991,7 @@ class MultiCompanyJobsScraper:
         
         total_jobs = sum(len(jobs) for jobs in all_jobs.values())
         total_new = sum(len(jobs) for jobs in new_jobs.values()) if new_jobs else 0
+        total_removed = sum(len(jobs) for jobs in removed_jobs.values()) if removed_jobs else 0
         
         try:
             # Create message
@@ -944,12 +999,14 @@ class MultiCompanyJobsScraper:
             subject = f"🤖 AI Research Jobs - {total_jobs} positions"
             if total_new > 0:
                 subject += f" ({total_new} new!)"
+            if total_removed > 0:
+                subject += f" ({total_removed} removed)"
             msg['Subject'] = subject
             msg['From'] = self.sender_email
             msg['To'] = self.recipient_email
             
             # Create HTML content
-            html_content = self.create_email_content(all_jobs, new_jobs)
+            html_content = self.create_email_content(all_jobs, new_jobs, removed_jobs)
             html_part = MIMEText(html_content, 'html')
             msg.attach(html_part)
             
@@ -1007,12 +1064,17 @@ class MultiCompanyJobsScraper:
         # Load previous jobs and find new ones
         previous_jobs = self.load_previous_jobs()
         new_jobs = self.find_new_jobs(all_jobs, previous_jobs)
+        removed_jobs = self.find_removed_jobs(all_jobs, previous_jobs)
         
         total_new = sum(len(jobs) for jobs in new_jobs.values())
+        total_removed = sum(len(jobs) for jobs in removed_jobs.values())
         if total_new > 0:
             print(f"\n🆕 Found {total_new} new job(s)!")
         else:
             print("\nℹ️ No new jobs since last check.")
+
+        if total_removed > 0:
+            print(f"❎ {total_removed} position(s) removed since last check.")
         
         # Display results
         self.display_jobs(all_jobs, new_jobs)
@@ -1025,7 +1087,7 @@ class MultiCompanyJobsScraper:
         
         # Send email if requested
         if send_email:
-            self.send_email(all_jobs, new_jobs if new_jobs else None)
+            self.send_email(all_jobs, new_jobs if new_jobs else None, removed_jobs if removed_jobs else None)
 
 
 def run_daily_scraper():
