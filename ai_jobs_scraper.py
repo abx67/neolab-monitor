@@ -567,49 +567,98 @@ class SeedScraper(JobScraper):
 
 
 class ThinkingMachinesScraper(JobScraper):
-    """Scraper for Thinking Machines AI jobs from their Greenhouse API."""
+    """Scraper for Thinking Machines AI jobs from their Ashby board."""
     
     def __init__(self):
-        super().__init__("Thinking Machines", "https://boards-api.greenhouse.io/v1/boards/thinkingmachines/jobs")
+        super().__init__("Thinking Machines", "https://jobs.ashbyhq.com/ThinkingMachines")
+        self.session.headers.update({
+            'Referer': 'https://jobs.ashbyhq.com/',
+            'Cache-Control': 'no-cache',
+            'Pragma': 'no-cache',
+            'Sec-Fetch-Dest': 'document',
+            'Sec-Fetch-Mode': 'navigate',
+            'Sec-Fetch-Site': 'same-origin',
+            'Upgrade-Insecure-Requests': '1',
+        })
     
     def scrape_jobs(self) -> List[Dict[str, str]]:
-        """Override the main scrape method to use JSON API instead of HTML parsing."""
-        return self.get_jobs()
-    
-    def extract_jobs(self, soup):
-        """Not used for API-based scraping, but required by base class."""
-        return []
-    
-    def get_jobs(self):
-        """Fetch ALL jobs from Thinking Machines' Greenhouse API (no filtering)."""
-        try:
-            response = requests.get(self.base_url, timeout=10)
-            response.raise_for_status()
-            data = response.json()
-            
-            jobs = []
-            for job in data.get('jobs', []):
-                job_title = job.get('title', '').strip()
-                location = job.get('location', {}).get('name', '').strip()
-                apply_url = job.get('absolute_url', '').strip()
-                
-                if job_title and apply_url:
-                    jobs.append({
-                        'title': job_title,
-                        'location': location,
-                        'apply_link': apply_url,
-                        'company': self.company_name
-                    })
-            
-            print(f"Found {len(jobs)} jobs from {self.company_name}")
-            return jobs
-            
-        except requests.RequestException as e:
-            print(f"Error fetching jobs from {self.company_name}: {e}")
+        """Override the main scrape method to use Ashby JSON data from the page."""
+        soup = self.fetch_page()
+        if not soup:
             return []
-        except Exception as e:
-            print(f"Unexpected error scraping {self.company_name}: {e}")
-            return []
+        return self.extract_jobs(soup)
+    
+    def extract_jobs(self, soup: BeautifulSoup) -> List[Dict[str, str]]:
+        """Extract job listings from Thinking Machines Ashby page."""
+        jobs = []
+        
+        script_tags = soup.find_all('script')
+        
+        for script in script_tags:
+            script_content = script.string
+            if script_content and 'window.__appData' in script_content:
+                try:
+                    start = script_content.find('window.__appData = ')
+                    if start == -1:
+                        start = script_content.find('window.__appData=')
+                        pattern = 'window.__appData='
+                    else:
+                        pattern = 'window.__appData = '
+                    
+                    if start != -1:
+                        start += len(pattern)
+                        bracket_count = 0
+                        in_string = False
+                        escape_next = False
+                        end = start
+                        
+                        for i, char in enumerate(script_content[start:], start):
+                            if escape_next:
+                                escape_next = False
+                                continue
+                            if char == '\\':
+                                escape_next = True
+                                continue
+                            if char == '"' and not escape_next:
+                                in_string = not in_string
+                                continue
+                            if not in_string:
+                                if char == '{':
+                                    bracket_count += 1
+                                elif char == '}':
+                                    bracket_count -= 1
+                                    if bracket_count == 0:
+                                        end = i + 1
+                                        break
+                        
+                        json_str = script_content[start:end]
+                        app_data = json.loads(json_str)
+                        
+                        job_data = []
+                        if 'jobBoard' in app_data and isinstance(app_data['jobBoard'], dict):
+                            job_board = app_data['jobBoard']
+                            if 'jobPostings' in job_board:
+                                job_data = job_board['jobPostings']
+                        
+                        for job in job_data:
+                            job_title = job.get('title', '').strip()
+                            location = job.get('locationName', '').strip()
+                            job_id = job.get('id', '').strip()
+                            
+                            if job_title and job_id:
+                                jobs.append({
+                                    'title': job_title,
+                                    'location': location or 'San Francisco',
+                                    'apply_link': f"https://jobs.ashbyhq.com/ThinkingMachines/{job_id}",
+                                    'job_url': f"https://jobs.ashbyhq.com/ThinkingMachines/{job_id}"
+                                })
+                        break
+                except (json.JSONDecodeError, ValueError, KeyError) as e:
+                    print(f"   Error parsing Thinking Machines JSON: {e}")
+                    continue
+        
+        print(f"Found {len(jobs)} jobs from {self.company_name}")
+        return jobs
 
 
 class MultiCompanyJobsScraper:
