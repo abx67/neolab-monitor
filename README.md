@@ -5,7 +5,10 @@ A Python scraper that monitors AI research engineer job postings from six leadin
 ## Quick Start
 
 ```bash
-# Install dependencies
+# Install dependencies (uv recommended; creates .venv + uv.lock)
+uv sync
+
+# Alternative: install with pip
 pip install -r requirements.txt
 
 # Configure environment
@@ -55,8 +58,11 @@ neolab-monitor/
 │   ├── setup.md
 │   └── contributing.md
 ├── main.py                 # CLI entry point
-├── requirements.txt
-├── requirements-test.txt
+├── pyproject.toml          # uv project definition (dependencies)
+├── uv.lock                 # Locked dependency versions
+├── .python-version         # Pinned Python version (3.12)
+├── requirements.txt        # pip fallback (production dependencies)
+├── requirements-test.txt   # pip fallback (test dependencies)
 ├── Procfile               # Heroku worker config
 └── .env.example
 ```
@@ -80,9 +86,11 @@ Without `GITHUB_TOKEN`, the scraper uses local file storage (`ai_jobs_history.js
 ## Running Tests
 
 ```bash
-pip install -r requirements-test.txt
-python -m pytest tests/ -v
+uv run pytest tests/ -v
 ```
+
+`uv sync` installs both the runtime and dev (test) dependencies into `.venv`.
+Alternatively, with pip: `pip install -r requirements-test.txt && python -m pytest tests/ -v`.
 
 ## Deployment
 

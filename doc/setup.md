@@ -2,7 +2,8 @@
 
 ## Prerequisites
 
-- Python 3.11+
+- Python 3.12 (pinned via `.python-version`)
+- [uv](https://docs.astral.sh/uv/) (recommended) or pip
 - Heroku CLI (for deployment)
 - GitHub account (for persistent storage)
 - Gmail account (for email notifications)
@@ -10,26 +11,36 @@
 ## Local Development
 
 ```bash
-# Install dependencies
-pip install -r requirements.txt
-pip install -r requirements-test.txt
+# Install dependencies (creates .venv and locks versions in uv.lock)
+uv sync
 
 # Copy environment template
 cp .env.example .env
 # Edit .env with your credentials
 
 # Run once
-python main.py
+uv run python main.py
 
 # Run with email
-python main.py --email
+uv run python main.py --email
 
 # Run with scheduler (for local testing)
-python main.py --schedule
+uv run python main.py --schedule
 
 # Run tests
+uv run pytest tests/ -v
+```
+
+<details>
+<summary>Prefer pip?</summary>
+
+```bash
+pip install -r requirements.txt
+pip install -r requirements-test.txt
+python main.py
 python -m pytest tests/ -v
 ```
+</details>
 
 ## Heroku Deployment
 
