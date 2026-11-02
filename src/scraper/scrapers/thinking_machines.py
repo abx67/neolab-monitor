@@ -1,11 +1,10 @@
 """Thinking Machines AI job scraper - Ashby-hosted board with JSON data."""
 
-import json
 import re
 from typing import List
 
 from bs4 import BeautifulSoup
-from src.scraper.base import JobScraper
+from src.scraper.base import JobScraper, _parse_ashby_app_data
 from src.scraper.models import Job
 
 
@@ -25,49 +24,15 @@ class ThinkingMachinesScraper(JobScraper):
         })
 
     def _parse_app_data(self, script_content: str):
-        """Extract and parse window.__appData JSON."""
-        try:
-            start = script_content.find("window.__appData = ")
-            if start == -1:
-                start = script_content.find("window.__appData=")
-                pattern = "window.__appData="
-            else:
-                pattern = "window.__appData = "
+        """Extract and parse window.__appData JSON.
 
-            if start == -1:
-                return None
+        Delegates to the shared ``_parse_ashby_app_data`` helper in
+        ``src.scraper.base`` to avoid duplicating the bracket-matching
+        logic.
+        """
+        return _parse_ashby_app_data(script_content)
 
-            start += len(pattern)
-            bracket_count = 0
-            in_string = False
-            escape_next = False
-            end = start
-
-            for i, char in enumerate(script_content[start:], start):
-                if escape_next:
-                    escape_next = False
-                    continue
-                if char == "\\":
-                    escape_next = True
-                    continue
-                if char == '"' and not escape_next:
-                    in_string = not in_string
-                    continue
-                if not in_string:
-                    if char == "{":
-                        bracket_count += 1
-                    elif char == "}":
-                        bracket_count -= 1
-                        if bracket_count == 0:
-                            end = i + 1
-                            break
-
-            json_str = script_content[start:end]
-            return json.loads(json_str)
-        except (json.JSONDecodeError, ValueError, KeyError):
-            return None
-
-    def scrape(self) -> List[Job]:
+    def scrape(self, enrich_descriptions: bool = True) -> List[Job]:
         soup = self.fetch_page()
         if not soup:
             return []
@@ -106,4 +71,9 @@ class ThinkingMachinesScraper(JobScraper):
             break
 
         print(f"  Found {len(jobs)} jobs from {self.company_name}")
+
+        # Fetch descriptions for filtering improvement
+        if enrich_descriptions:
+            jobs = self.enrich_with_descriptions(jobs)
+
         return jobs

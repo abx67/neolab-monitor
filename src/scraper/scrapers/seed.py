@@ -32,7 +32,7 @@ class SeedScraper(JobScraper):
     def __init__(self):
         super().__init__("ByteDance Seed", "https://seed.bytedance.com/en/career")
 
-    def scrape(self) -> List[Job]:
+    def scrape(self, enrich_descriptions: bool = True) -> List[Job]:
         all_jobs: List[Job] = []
 
         for team_url in self.TEAM_PAGES:
@@ -56,6 +56,11 @@ class SeedScraper(JobScraper):
                 seen.add(job.apply_link)
 
         print(f"  Found {len(unique_jobs)} unique jobs from {self.company_name}")
+
+        # Fetch descriptions for filtering improvement
+        if enrich_descriptions:
+            unique_jobs = self.enrich_with_descriptions(unique_jobs)
+
         return unique_jobs
 
     def _extract_jobs_from_page(self, soup: BeautifulSoup, team_url: str) -> List[Job]:

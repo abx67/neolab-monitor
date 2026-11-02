@@ -1,6 +1,5 @@
 """OpenAI job scraper - scrapes Ashby-hosted job board with JSON data extraction."""
 
-import json
 import re
 import time
 from typing import List, Optional
@@ -8,7 +7,7 @@ from typing import List, Optional
 import requests
 from bs4 import BeautifulSoup
 
-from src.scraper.base import JobScraper
+from src.scraper.base import JobScraper, _parse_ashby_app_data
 from src.scraper.models import Job
 
 
@@ -53,47 +52,13 @@ class OpenAIScraper(JobScraper):
         return None
 
     def _parse_app_data_json(self, script_content: str):
-        """Extract and parse window.__appData JSON from a script tag."""
-        try:
-            start = script_content.find("window.__appData = ")
-            if start == -1:
-                start = script_content.find("window.__appData=")
-                pattern = "window.__appData="
-            else:
-                pattern = "window.__appData = "
+        """Extract and parse window.__appData JSON from a script tag.
 
-            if start == -1:
-                return None
-
-            start += len(pattern)
-            bracket_count = 0
-            in_string = False
-            escape_next = False
-            end = start
-
-            for i, char in enumerate(script_content[start:], start):
-                if escape_next:
-                    escape_next = False
-                    continue
-                if char == "\\":
-                    escape_next = True
-                    continue
-                if char == '"' and not escape_next:
-                    in_string = not in_string
-                    continue
-                if not in_string:
-                    if char == "{":
-                        bracket_count += 1
-                    elif char == "}":
-                        bracket_count -= 1
-                        if bracket_count == 0:
-                            end = i + 1
-                            break
-
-            json_str = script_content[start:end]
-            return json.loads(json_str)
-        except (json.JSONDecodeError, ValueError, KeyError):
-            return None
+        Delegates to the shared ``_parse_ashby_app_data`` helper in
+        ``src.scraper.base`` to avoid duplicating the bracket-matching
+        logic.
+        """
+        return _parse_ashby_app_data(script_content)
 
     def _extract_jobs_from_app_data(self, app_data: dict) -> List[Job]:
         """Extract job dicts from parsed __appData."""
@@ -173,7 +138,7 @@ class OpenAIScraper(JobScraper):
             ))
         return jobs
 
-    def scrape(self) -> List[Job]:
+    def scrape(self, enrich_descriptions: bool = True) -> List[Job]:
         soup = self.fetch_page()
         if not soup:
             return []
@@ -197,5 +162,9 @@ class OpenAIScraper(JobScraper):
         if not jobs:
             print("  JSON parsing yielded no results, trying HTML fallback...")
             jobs = self._fallback_html_scraper(soup)
+
+        # Fetch descriptions for filtering improvement
+        if enrich_descriptions:
+            jobs = self.enrich_with_descriptions(jobs)
 
         return jobs
