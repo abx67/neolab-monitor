@@ -1,0 +1,1045 @@
+{
+  "Anthropic": [
+    {
+      "title": "Engineering Manager, Research Productivity",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5223093008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer / Research Scientist, Pre-training",
+      "location": "Zürich, CH",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5135168008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer / Scientist, Alignment",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4631822008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Chip Design RL (Reinforcement Learning)",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5231612008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Code RL (Reinforcement Learning)",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5254364008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Computer Use",
+      "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5285246008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Discovery",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4669581008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Domain Scaling",
+      "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5271380008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Economic Research Data Platform",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5071132008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Interpretability",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4980430008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Knowledge Team",
+      "location": "Remote-Friendly (Travel-Required) | San Francisco, CA | Seattle, WA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4017331008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Life Sciences",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5265365008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Machine Learning (Reinforcement Learning)",
+      "location": "London, UK",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5115935008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Machine Learning (Reinforcement Learning)",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4613568008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Machine Learning (RL Velocity)",
+      "location": "London, UK",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5198074008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Machine Learning (RL Velocity)",
+      "location": "Remote-Friendly (Travel-Required) | San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5198108008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Model Evaluations",
+      "location": "Remote-Friendly (Travel-Required) | San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5198255008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Performance RL (Reinforcement Learning)",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5160330008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Pretraining",
+      "location": "London, UK",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5119713008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Pretraining Scaling",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4938432008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Pretraining Scaling - London",
+      "location": "London, UK",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4938436008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Production Model Post-Training",
+      "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4613592008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Production Model Post-Training",
+      "location": "Zürich, CH",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5112018008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, RL Engineering",
+      "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4952051008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, RL Scaling Science",
+      "location": "London, UK",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5264619008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Universes",
+      "location": "Remote-Friendly (Travel-Required) | San Francisco, CA | Seattle, WA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5061517008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Visual Knowledge Work",
+      "location": "New York City, NY; San Francisco, CA; Seattle, WA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5074217008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer/Research Scientist, Pre-training",
+      "location": "Remote-Friendly (Travel-Required) | San Francisco, CA | Seattle, WA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4616971008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist, Interpretability",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4980427008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist, Life Sciences",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5239733008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist, Life Sciences (Computational)",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5357739008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist, Takeoff Intel",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5370669008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Research Tools",
+      "location": "San Francisco, CA | New York City, NY; San Francisco, CA | New York City, NY | Seattle, WA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4981828008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Staff Research Engineer, Discovery Team",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4593216008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Product Manager, Research (Code)",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5324349008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Product Manager, Labs",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5096878008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Product Manager, Model Behaviors",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5247407008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Regional Research Economist, Economic Research",
+      "location": "London, UK",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5231200008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Regional Research Economist, Economic Research",
+      "location": "Singapore",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5231205008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Economist, Economic Research",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5018472008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Transformative AI Research Economist, Economic Research",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5149802008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    }
+  ],
+  "OpenAI": [
+    {
+      "title": "Academic Research Partnerships & Programs Lead",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/d7dc62fc-e7ce-4f58-a912-4b62b65c7eb6",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/d7dc62fc-e7ce-4f58-a912-4b62b65c7eb6",
+      "description": ""
+    },
+    {
+      "title": "Machine Learning Engineer, Distributed Data Systems - Robotics",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/4a13c764-18c3-4076-ac87-29e05491be07",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/4a13c764-18c3-4076-ac87-29e05491be07",
+      "description": ""
+    },
+    {
+      "title": "Machine Learning Engineer, Integrity",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/ecf1abec-898c-4acb-a984-42858836a1ff",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/ecf1abec-898c-4acb-a984-42858836a1ff",
+      "description": ""
+    },
+    {
+      "title": "Market Research Lead",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/f4cacc93-288b-425f-8bc2-5310d3f12d53",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/f4cacc93-288b-425f-8bc2-5310d3f12d53",
+      "description": ""
+    },
+    {
+      "title": "Research Communications Manager, Safety",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/cec9ba9a-0b2d-4e90-8482-01ccc72234fb",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/cec9ba9a-0b2d-4e90-8482-01ccc72234fb",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/240d459b-696d-43eb-8497-fab3e56ecd9b",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/240d459b-696d-43eb-8497-fab3e56ecd9b",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Codex",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/793964ae-d40b-45e3-9798-84f4b6da48c5",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/793964ae-d40b-45e3-9798-84f4b6da48c5",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Frontier Evals & Environments",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/bba18df5-f30f-4d2c-909c-30e651f95579",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/bba18df5-f30f-4d2c-909c-30e651f95579",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Privacy",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/cc434f5b-dc0b-42fd-97ec-e0171545c6e9",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/cc434f5b-dc0b-42fd-97ec-e0171545c6e9",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer / Research Scientist / AI Systems Engineer, RSI",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/7243bdb7-7f75-4dff-a10f-18bd7296f632",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/7243bdb7-7f75-4dff-a10f-18bd7296f632",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer / Research Scientist - Personal AGI, Memory",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/29074a51-9cb3-47c9-a8a7-f283cd14fa6c",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/29074a51-9cb3-47c9-a8a7-f283cd14fa6c",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer/Research Scientist- Personal AGI, Model Experience",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/872ca3d0-c8c0-4585-9a34-7f9ed6b4dbf9",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/872ca3d0-c8c0-4585-9a34-7f9ed6b4dbf9",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer/Research Scientist - Personal AGI, North Stars",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/171ebca6-de53-4d6e-a312-30332f353957",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/171ebca6-de53-4d6e-a312-30332f353957",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer / Research Scientist - Personal AGI, Personality and Model Behavior",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/a86d9477-0277-498c-9647-02a257747607",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/a86d9477-0277-498c-9647-02a257747607",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer / Research Scientist - Personal AGI, Personalization ",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/1bf678c5-1058-45ca-b9bd-b0029fccd60e",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/1bf678c5-1058-45ca-b9bd-b0029fccd60e",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer / Research Scientist- Personal AGI (Post Training)",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/1c516e9f-c97d-4a40-8529-9871dac615a5",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/1c516e9f-c97d-4a40-8529-9871dac615a5",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer / Research Scientist -Personal AGI, Proactivity ",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/e57d196b-4fa0-4463-bd33-d8189f0d3541",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/e57d196b-4fa0-4463-bd33-d8189f0d3541",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer/Research Scientist, RL/Reasoning",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/7e198d81-34e0-48b6-b64e-a501a75f9d53",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/7e198d81-34e0-48b6-b64e-a501a75f9d53",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Retrieval & Search, Applied Engineering",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/7322d344-9325-4a92-8445-0a2c4e9272f8",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/7322d344-9325-4a92-8445-0a2c4e9272f8",
+      "description": ""
+    },
+    {
+      "title": "Research Program Manager – Adversarial Model Research",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/65913e57-80e0-4a1a-bbc3-265ae8a1a41b",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/65913e57-80e0-4a1a-bbc3-265ae8a1a41b",
+      "description": ""
+    },
+    {
+      "title": "Research Program Manager, Data Acquisition",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/71004494-9a55-4ed5-b458-2ff475f0d881",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/71004494-9a55-4ed5-b458-2ff475f0d881",
+      "description": ""
+    },
+    {
+      "title": "Research Program Manager, Human Data Campaigns",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/5edd5a13-2fc9-427c-ad88-2b67c97a0afe",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/5edd5a13-2fc9-427c-ad88-2b67c97a0afe",
+      "description": ""
+    },
+    {
+      "title": "Research Scientist",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/5f0c6579-0bfb-4a06-8a43-1dd371499e10",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/5f0c6579-0bfb-4a06-8a43-1dd371499e10",
+      "description": ""
+    },
+    {
+      "title": "Research Scientist - Multimodal Agent, Consumer Devices",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/09253a0e-a2b8-49d1-80bb-6955ba3b08a3",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/09253a0e-a2b8-49d1-80bb-6955ba3b08a3",
+      "description": ""
+    },
+    {
+      "title": "Senior Software Engineer - Research Platform, Consumer Devices",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/6d9925f4-3d0a-4710-8304-032d0080d12d",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/6d9925f4-3d0a-4710-8304-032d0080d12d",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Research Developer Productivity",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/e6d5ca02-f30b-4ac5-a69d-c947efb430f9",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/e6d5ca02-f30b-4ac5-a69d-c947efb430f9",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Research - Human Data",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/4d6a5951-9838-434c-830a-22cb938ea228",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/4d6a5951-9838-434c-830a-22cb938ea228",
+      "description": ""
+    }
+  ],
+  "DeepMind": [],
+  "X.ai": [
+    {
+      "title": "Member of Technical Staff - Ads",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/4996796007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member Of Technical Staff - Cloud Infrastructure",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5133071007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Grok Product",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5051984007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Imagine Model",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5051985007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Imagine Product",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5052027007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Imagine Safety",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5151022007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff -  Media",
+      "location": "Palo Alto, California; Seattle, Washington",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/4805874007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Mid-training",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/4965893007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Model Training",
+      "location": "Austin, Texas; New York, New York; Palo Alto, California; Seattle, Washington",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5086324007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Multimodal Understanding",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5111374007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Post-Training and RL",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5114737007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Recommendation Systems",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/4703144007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - RL Inference",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5180223007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - RL Training Framework",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5186992007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Sandbox Service",
+      "location": "London, England, United Kingdom",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5007872007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Voice Product",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5051970007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - X Money",
+      "location": "Tokyo, Japan",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5007310007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Analyst",
+      "location": "New York, New York",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5208808007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    }
+  ],
+  "ByteDance Seed": [
+    {
+      "title": "Research Scientist in Large Language Model(Seed-LLM)",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7233349076828490043",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist in Large Language Model, Seed-Graduates- 2026 Start",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7561701031874693429",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist, Vision Foundation Model",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7362026100950321459",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist Graduate (Foundation Model, Generative AI) - 2026 Start (PhD)",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7593345683353012485",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist, Foundation Model, Speech Understanding",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7302173991929497882",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist Graduate (Foundation Model-Speech-Interaction & Learning) - 2026 Start (PhD）",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7397590567570426162",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist - Seed Multimodal Interaction and World Model",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7533299082606332168",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist Graduate- (Multimodal Interaction and World Model) - 2026 Start (PhD)",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7488465961747220744",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    }
+  ],
+  "Thinking Machines": [
+    {
+      "title": "Endpoint Engineer, IT",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/b6286930-aba7-4a52-b298-53f948cd9ce8",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/b6286930-aba7-4a52-b298-53f948cd9ce8",
+      "description": ""
+    },
+    {
+      "title": "Engineering Manager",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/1161c2d5-17a1-41cb-a2c8-5558d5e42acb",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/1161c2d5-17a1-41cb-a2c8-5558d5e42acb",
+      "description": ""
+    },
+    {
+      "title": "Executive Business Partner",
+      "location": "New York",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/740ab75b-954c-46fe-9ffa-2d9ede9c135a",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/740ab75b-954c-46fe-9ffa-2d9ede9c135a",
+      "description": ""
+    },
+    {
+      "title": "Governance, Risk and Compliance Lead",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/162cac0f-7861-413f-8ffb-2df1823be067",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/162cac0f-7861-413f-8ffb-2df1823be067",
+      "description": ""
+    },
+    {
+      "title": "HR Business Partner",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/a3e5a969-33cc-44d6-932a-a8bc7c505eef",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/a3e5a969-33cc-44d6-932a-a8bc7c505eef",
+      "description": ""
+    },
+    {
+      "title": "Infrastructure Engineer, Security",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/14bef671-162c-4513-bfcf-e679e41e10a8",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/14bef671-162c-4513-bfcf-e679e41e10a8",
+      "description": ""
+    },
+    {
+      "title": "IT Engineer",
+      "location": "New York",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/8d60e5f3-222d-4f64-b640-24f40e1ab563",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/8d60e5f3-222d-4f64-b640-24f40e1ab563",
+      "description": ""
+    },
+    {
+      "title": "Network Engineer, Supercomputing",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/2c38437e-cdab-422c-9491-faaa02a3718b",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/2c38437e-cdab-422c-9491-faaa02a3718b",
+      "description": ""
+    },
+    {
+      "title": "Recruiting Coordinator, Research",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/24fdba4c-7c87-48d2-aec3-7421fd2577d2",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/24fdba4c-7c87-48d2-aec3-7421fd2577d2",
+      "description": ""
+    },
+    {
+      "title": "Reliability Engineer, Supercomputing",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/8023baca-61b5-4f7d-b145-b96881754366",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/8023baca-61b5-4f7d-b145-b96881754366",
+      "description": ""
+    },
+    {
+      "title": "Research, Audio Expertise",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/24f4c1e0-12bc-4f6c-ae7a-637ecd6bd56c",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/24f4c1e0-12bc-4f6c-ae7a-637ecd6bd56c",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Developer Experience, Tinker",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/f9f68c71-6603-4d73-a369-c5ccc51622e5",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/f9f68c71-6603-4d73-a369-c5ccc51622e5",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Infrastructure, Inference",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/4087e0f6-4295-419a-ba02-08e95a74ceea",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/4087e0f6-4295-419a-ba02-08e95a74ceea",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Infrastructure, Kernels",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/2d7a9e99-836a-475b-9ae3-b6b1df8baa6d",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/2d7a9e99-836a-475b-9ae3-b6b1df8baa6d",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Infrastructure, Numerics",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/93855db2-9a80-421d-9e80-ace9eca24650",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/93855db2-9a80-421d-9e80-ace9eca24650",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Infrastructure, RL Systems",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/c09f086c-b34b-4d34-b1fb-e5672c666dd8",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/c09f086c-b34b-4d34-b1fb-e5672c666dd8",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Infrastructure, Training Systems",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/9dabecde-1bdb-47c6-b943-ff7b0526657c",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/9dabecde-1bdb-47c6-b943-ff7b0526657c",
+      "description": ""
+    },
+    {
+      "title": "Research, Post-Training",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/3efb6896-4840-4f90-8798-2ce49fa146e5",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/3efb6896-4840-4f90-8798-2ce49fa146e5",
+      "description": ""
+    },
+    {
+      "title": "Research, Post-Training Data",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/aa68b4e0-d079-477b-9e0e-8b8f94cd6cfc",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/aa68b4e0-d079-477b-9e0e-8b8f94cd6cfc",
+      "description": ""
+    },
+    {
+      "title": "Research, Pre-Training Data",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/27ec4240-9f70-4ebe-abc0-a7336358a9a4",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/27ec4240-9f70-4ebe-abc0-a7336358a9a4",
+      "description": ""
+    },
+    {
+      "title": "Research, Pre-Training Science",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/17e34f27-4ce8-4bf2-b9dc-83a1816e21f9",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/17e34f27-4ce8-4bf2-b9dc-83a1816e21f9",
+      "description": ""
+    },
+    {
+      "title": "Research Product Manager",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/079f3334-43ae-4ee7-9671-1dbad75dd8df",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/079f3334-43ae-4ee7-9671-1dbad75dd8df",
+      "description": ""
+    },
+    {
+      "title": "Research, Vision Expertise",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/2d72cec2-bad2-4d70-9b55-ee1dd73dc3d4",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/2d72cec2-bad2-4d70-9b55-ee1dd73dc3d4",
+      "description": ""
+    },
+    {
+      "title": "Safety Operations Lead",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/9d1124f7-7f78-4e8d-a033-568c315826eb",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/9d1124f7-7f78-4e8d-a033-568c315826eb",
+      "description": ""
+    },
+    {
+      "title": "Site Reliability Engineer (SRE)",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/c4cddfec-33de-4f67-9801-1308c2151952",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/c4cddfec-33de-4f67-9801-1308c2151952",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Data Infrastructure",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/5585b16b-32ef-4f7f-a97e-90581416e921",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/5585b16b-32ef-4f7f-a97e-90581416e921",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Developer Productivity, AI Tools",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/922c3777-64d1-468e-bb9b-aa68f3fec823",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/922c3777-64d1-468e-bb9b-aa68f3fec823",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Full Stack",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/43807be9-a5c6-44b7-b9f9-037559b6dd11",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/43807be9-a5c6-44b7-b9f9-037559b6dd11",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Full Stack, Tinker",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/32b90fb6-428f-43db-a04d-64500a35b042",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/32b90fb6-428f-43db-a04d-64500a35b042",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Platform, Tinker",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/c8427628-5315-403e-98b5-dddf2cee6063",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/c8427628-5315-403e-98b5-dddf2cee6063",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Research Acceleration",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/7fe42673-a392-4adb-a9e6-97554dd0a28d",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/7fe42673-a392-4adb-a9e6-97554dd0a28d",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Security",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/7c8b01f8-8542-4cb4-9701-5578960cda3b",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/7c8b01f8-8542-4cb4-9701-5578960cda3b",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Supercomputing",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/0046b97e-6b8d-4dde-8d11-37aed910151a",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/0046b97e-6b8d-4dde-8d11-37aed910151a",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Systems Generalist",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/61e7846c-afc3-41a1-93f5-37642f6a72a6",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/61e7846c-afc3-41a1-93f5-37642f6a72a6",
+      "description": ""
+    },
+    {
+      "title": "Technical Sourcer",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/0b0b63c8-79b6-4901-9861-4a7f98370d30",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/0b0b63c8-79b6-4901-9861-4a7f98370d30",
+      "description": ""
+    }
+  ]
+}
