@@ -1,0 +1,18 @@
+[project]
+name = "neolab-monitor"
+version = "0.1.0"
+description = "Python scraper that monitors AI research engineer job postings and sends email notifications"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+    "schedule>=1.2.0",
+    "python-dotenv>=1.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
