@@ -16,7 +16,7 @@ class XAIScraper(JobScraper):
             "https://boards-api.greenhouse.io/v1/boards/xai/jobs",
         )
 
-    def scrape(self) -> List[Job]:
+    def scrape(self, enrich_descriptions: bool = True) -> List[Job]:
         """Fetch jobs from X.ai's Greenhouse API."""
         try:
             print(f"  Fetching {self.company_name} jobs from API...")
@@ -39,6 +39,11 @@ class XAIScraper(JobScraper):
                     ))
 
             print(f"  Found {len(jobs)} jobs from {self.company_name}")
+
+            # Fetch descriptions for filtering improvement
+            if enrich_descriptions:
+                jobs = self.enrich_with_descriptions(jobs)
+
             return jobs
 
         except requests.RequestException as e:

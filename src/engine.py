@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from typing import Dict, List
 
 from src.config import Config
@@ -13,7 +14,8 @@ from src.scraper.scrapers.seed import SeedScraper
 from src.scraper.scrapers.thinking_machines import ThinkingMachinesScraper
 from src.scraper.scrapers.xai import XAIScraper
 from src.storage.base import StorageABC
-from src.filter import filter_jobs, diff_jobs
+from src.filter import filter_jobs, diff_jobs, rank_jobs, _load_user_interests
+from src.feedback import FeedbackStore
 
 
 class JobEngine:
@@ -23,6 +25,8 @@ class JobEngine:
         self.config = config
         self.storage = storage
         self._init_scrapers()
+        self._interests = _load_user_interests(config.user_interests_file)
+        self._feedback_store = FeedbackStore()
 
     def _init_scrapers(self) -> None:
         self.scrapers: List = [
@@ -36,14 +40,23 @@ class JobEngine:
 
     # ── public API ──────────────────────────────────────────────────────
 
-    def scrape_all(self) -> Dict[str, List[Job]]:
-        """Scrape every company; apply research filter unless company is whitelisted."""
+    def scrape_all(self, llm_enabled: bool = False) -> Dict[str, List[Job]]:
+        """Scrape every company; apply research filter unless company is whitelisted.
+
+        Args:
+            llm_enabled: Whether to run LLM classification after filtering.
+        """
+        from src.llm_classifier import classify_jobs_llm, filter_with_llm
+
         results: Dict[str, List[Job]] = {}
+
+        auto_interests = self._feedback_store.get_auto_interests()
+        auto_blacklist = self._feedback_store.get_auto_blacklist()
 
         for scraper in self.scrapers:
             print(f"\n  Scraping {scraper.company_name}...")
             try:
-                jobs = scraper.scrape()
+                jobs = scraper.scrape(enrich_descriptions=False)
             except Exception as e:
                 print(f"  Error scraping {scraper.company_name}: {e}")
                 jobs = []
@@ -54,12 +67,30 @@ class JobEngine:
                 continue
 
             if scraper.company_name in self.config.no_filter_companies:
+                jobs = scraper.enrich_with_descriptions(jobs)
                 results[scraper.company_name] = jobs
                 print(f"  Found {len(jobs)} total jobs, all positions included")
             else:
-                filtered = filter_jobs(jobs, self.config.blacklist_keywords)
-                results[scraper.company_name] = filtered
-                print(f"  Found {len(jobs)} total jobs, {len(filtered)} research positions")
+                filtered = filter_jobs(jobs, self.config.blacklist_keywords + auto_blacklist, self._interests)
+                # Rank filtered jobs by relevance
+                ranked = rank_jobs(filtered, self._interests, auto_interests=auto_interests, auto_blacklist=auto_blacklist)
+                # Enrich only relevant jobs with descriptions
+                ranked = scraper.enrich_with_descriptions(ranked)
+                results[scraper.company_name] = ranked
+                print(f"  Found {len(jobs)} total jobs, {len(filtered)} research positions"
+                      f"{' (interests loaded)' if self._interests else ''}")
+
+        # LLM classification pass
+        if llm_enabled:
+            for company, jobs in results.items():
+                if not jobs:
+                    continue
+                print(f"\n  🤖 LLM classifying {company} ({len(jobs)} jobs)...")
+                classified = classify_jobs_llm(jobs, limit=10)
+                # Re-filter with LLM results (fall back to rule-based on LLM errors)
+                llm_filtered = filter_with_llm(classified, include_possible=True, fallback_to_rule_based=True)
+                results[company] = llm_filtered
+                print(f"  LLM: {len(jobs)} → {len(llm_filtered)} jobs after classification")
 
         return results
 
@@ -77,14 +108,14 @@ class JobEngine:
                 diff[company] = DiffResult(new_jobs=new_jobs, removed_jobs=removed_jobs)
         return diff
 
-    def run(self, send_email: bool = False) -> None:
+    def run(self, send_email: bool = False, llm_enabled: bool = False) -> None:
         """Full pipeline: scrape → diff → display → save → (optionally) email."""
         print("=" * 60)
         print("  AI Research Engineer Jobs Scraper")
         print("  Companies: Anthropic, OpenAI, DeepMind, X.ai, ByteDance Seed, Thinking Machines")
         print("=" * 60)
 
-        all_jobs = self.scrape_all()
+        all_jobs = self.scrape_all(llm_enabled=llm_enabled)
 
         previous_jobs_raw = self.storage.load_previous_jobs()
         previous_jobs: Dict[str, List[Job]] = {
@@ -113,15 +144,14 @@ class JobEngine:
             removed_jobs_by_company = {
                 c: d.removed_jobs for c, d in diff_result.items() if d.removed_jobs
             }
-            if new_jobs_by_company or removed_jobs_by_company:
-                from src.notifier import EmailNotifier
-                notifier = EmailNotifier(self.config)
-                notifier.send(all_jobs, new_jobs_by_company or None, removed_jobs_by_company or None)
+            from src.notifier import EmailNotifier
+            notifier = EmailNotifier(self.config)
+            notifier.send(all_jobs, new_jobs_by_company or None, removed_jobs_by_company or None)
 
     # ── internals ───────────────────────────────────────────────────────
 
     def _display_results(self, all_jobs: Dict[str, List[Job]],
-                         diff_result: Dict[str, DiffResult]) -> None:
+                          diff_result: Dict[str, DiffResult]) -> None:
         total = sum(len(jobs) for jobs in all_jobs.values())
         print(f"\n{'=' * 60}")
         print(f"  AI RESEARCH ENGINEER JOBS — {total} positions found")
@@ -139,7 +169,15 @@ class JobEngine:
             print("  " + "-" * 50)
             for i, job in enumerate(jobs, 1):
                 indicator = " 🆕" if job.title in new_titles else ""
-                print(f"  {i}. {job.title}{indicator}")
+                # Show LLM classification if available
+                llm_tag = ""
+                llm_cls = getattr(job, "llm_classification", None)  # type: ignore[attr-defined]
+                if llm_cls:
+                    if llm_cls.get("category") == "relevant":
+                        llm_tag = " ⭐"
+                    elif llm_cls.get("category") == "not_relevant":
+                        llm_tag = " ✗"
+                print(f"  {i}. {job.title}{indicator}{llm_tag}")
                 print(f"     📍 Location: {job.location}")
                 if job.apply_link:
                     print(f"     🔗 Apply: {job.apply_link}")
