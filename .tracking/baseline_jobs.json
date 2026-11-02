@@ -1,0 +1,1126 @@
+{
+  "Anthropic": [
+    {
+      "title": "Engineering Manager, Research Productivity",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5223093008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "ML/Research Engineer, Safeguards",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4949336008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer (Senior Staff+), Safeguards Labs",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5191785008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer / Research Scientist, Pre-training",
+      "location": "Zürich, CH",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5135168008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer / Scientist, Alignment",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4631822008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Chip Design RL (Reinforcement Learning)",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5231612008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Code RL (Reinforcement Learning)",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5254364008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Computer Use",
+      "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5285246008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Cybersecurity RL (Reinforcement Learning)",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5025624008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Discovery",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4669581008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Domain Scaling",
+      "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5271380008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Economic Research Data Platform",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5071132008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Interpretability",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4980430008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Knowledge Team",
+      "location": "Remote-Friendly (Travel-Required) | San Francisco, CA | Seattle, WA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4017331008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Life Sciences",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5265365008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Machine Learning (Reinforcement Learning)",
+      "location": "London, UK",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5115935008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Machine Learning (Reinforcement Learning)",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4613568008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Machine Learning (RL Velocity)",
+      "location": "London, UK",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5198074008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Machine Learning (RL Velocity)",
+      "location": "Remote-Friendly (Travel-Required) | San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5198108008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Model Evaluations",
+      "location": "Remote-Friendly (Travel-Required) | San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5198255008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Performance RL (Reinforcement Learning)",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5160330008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Pretraining",
+      "location": "London, UK",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5119713008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Pretraining Scaling",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4938432008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Pretraining Scaling - London",
+      "location": "London, UK",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4938436008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Production Model Post-Training",
+      "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4613592008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Production Model Post-Training",
+      "location": "Zürich, CH",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5112018008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, RL Engineering",
+      "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4952051008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, RL Scaling Science",
+      "location": "London, UK",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5264619008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Universes",
+      "location": "Remote-Friendly (Travel-Required) | San Francisco, CA | Seattle, WA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5061517008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Visual Knowledge Work",
+      "location": "New York City, NY; San Francisco, CA; Seattle, WA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5074217008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Engineer/Research Scientist, Pre-training",
+      "location": "Remote-Friendly (Travel-Required) | San Francisco, CA | Seattle, WA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4616971008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist, Interpretability",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4980427008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist, Life Sciences",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5239733008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist, Life Sciences (Computational)",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5357739008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist, Takeoff Intel",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5370669008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Research Tools",
+      "location": "San Francisco, CA | New York City, NY; San Francisco, CA | New York City, NY | Seattle, WA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4981828008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Staff Research Engineer, Discovery Team",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4593216008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "People Research Scientist, Recruiting",
+      "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5362838008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Recruiter, AI Research",
+      "location": "San Francisco, CA | Seattle, WA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/4935314008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Product Manager, Research (Code)",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5324349008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Product Manager, Labs",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5096878008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Product Manager, Model Behaviors",
+      "location": "San Francisco, CA | New York City, NY",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5247407008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Regional Research Economist, Economic Research",
+      "location": "London, UK",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5231200008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Regional Research Economist, Economic Research",
+      "location": "Singapore",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5231205008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Economist, Economic Research",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5018472008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Transformative AI Research Economist, Economic Research",
+      "location": "San Francisco, CA",
+      "apply_link": "https://job-boards.greenhouse.io/anthropic/jobs/5149802008",
+      "company": "Anthropic",
+      "job_url": null,
+      "description": ""
+    }
+  ],
+  "OpenAI": [
+    {
+      "title": "Academic Research Partnerships & Programs Lead",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/d7dc62fc-e7ce-4f58-a912-4b62b65c7eb6",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/d7dc62fc-e7ce-4f58-a912-4b62b65c7eb6",
+      "description": ""
+    },
+    {
+      "title": "Machine Learning Engineer, Distributed Data Systems - Robotics",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/4a13c764-18c3-4076-ac87-29e05491be07",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/4a13c764-18c3-4076-ac87-29e05491be07",
+      "description": ""
+    },
+    {
+      "title": "Machine Learning Engineer, Integrity",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/ecf1abec-898c-4acb-a984-42858836a1ff",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/ecf1abec-898c-4acb-a984-42858836a1ff",
+      "description": ""
+    },
+    {
+      "title": "Market Research Lead",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/f4cacc93-288b-425f-8bc2-5310d3f12d53",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/f4cacc93-288b-425f-8bc2-5310d3f12d53",
+      "description": ""
+    },
+    {
+      "title": "Recruiter, AI/ML Research EMEA",
+      "location": "London, UK",
+      "apply_link": "https://jobs.ashbyhq.com/openai/49111f4e-eac8-438a-aca3-6b8896ae4287",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/49111f4e-eac8-438a-aca3-6b8896ae4287",
+      "description": ""
+    },
+    {
+      "title": "Research Communications Manager, Safety",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/cec9ba9a-0b2d-4e90-8482-01ccc72234fb",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/cec9ba9a-0b2d-4e90-8482-01ccc72234fb",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/240d459b-696d-43eb-8497-fab3e56ecd9b",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/240d459b-696d-43eb-8497-fab3e56ecd9b",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Codex",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/793964ae-d40b-45e3-9798-84f4b6da48c5",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/793964ae-d40b-45e3-9798-84f4b6da48c5",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Frontier Evals & Environments",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/bba18df5-f30f-4d2c-909c-30e651f95579",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/bba18df5-f30f-4d2c-909c-30e651f95579",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Privacy",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/cc434f5b-dc0b-42fd-97ec-e0171545c6e9",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/cc434f5b-dc0b-42fd-97ec-e0171545c6e9",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer / Research Scientist / AI Systems Engineer, RSI",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/7243bdb7-7f75-4dff-a10f-18bd7296f632",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/7243bdb7-7f75-4dff-a10f-18bd7296f632",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer / Research Scientist - Personal AGI, Memory",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/29074a51-9cb3-47c9-a8a7-f283cd14fa6c",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/29074a51-9cb3-47c9-a8a7-f283cd14fa6c",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer/Research Scientist- Personal AGI, Model Experience",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/872ca3d0-c8c0-4585-9a34-7f9ed6b4dbf9",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/872ca3d0-c8c0-4585-9a34-7f9ed6b4dbf9",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer/Research Scientist - Personal AGI, North Stars",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/171ebca6-de53-4d6e-a312-30332f353957",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/171ebca6-de53-4d6e-a312-30332f353957",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer / Research Scientist - Personal AGI, Personality and Model Behavior",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/a86d9477-0277-498c-9647-02a257747607",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/a86d9477-0277-498c-9647-02a257747607",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer / Research Scientist - Personal AGI, Personalization ",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/1bf678c5-1058-45ca-b9bd-b0029fccd60e",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/1bf678c5-1058-45ca-b9bd-b0029fccd60e",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer / Research Scientist- Personal AGI (Post Training)",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/1c516e9f-c97d-4a40-8529-9871dac615a5",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/1c516e9f-c97d-4a40-8529-9871dac615a5",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer / Research Scientist -Personal AGI, Proactivity ",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/e57d196b-4fa0-4463-bd33-d8189f0d3541",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/e57d196b-4fa0-4463-bd33-d8189f0d3541",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer/Research Scientist, RL/Reasoning",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/7e198d81-34e0-48b6-b64e-a501a75f9d53",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/7e198d81-34e0-48b6-b64e-a501a75f9d53",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Retrieval & Search, Applied Engineering",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/7322d344-9325-4a92-8445-0a2c4e9272f8",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/7322d344-9325-4a92-8445-0a2c4e9272f8",
+      "description": ""
+    },
+    {
+      "title": "Research Program Manager – Adversarial Model Research",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/65913e57-80e0-4a1a-bbc3-265ae8a1a41b",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/65913e57-80e0-4a1a-bbc3-265ae8a1a41b",
+      "description": ""
+    },
+    {
+      "title": "Research Program Manager, Data Acquisition",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/71004494-9a55-4ed5-b458-2ff475f0d881",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/71004494-9a55-4ed5-b458-2ff475f0d881",
+      "description": ""
+    },
+    {
+      "title": "Research Program Manager, Human Data Campaigns",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/5edd5a13-2fc9-427c-ad88-2b67c97a0afe",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/5edd5a13-2fc9-427c-ad88-2b67c97a0afe",
+      "description": ""
+    },
+    {
+      "title": "Research Scientist",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/5f0c6579-0bfb-4a06-8a43-1dd371499e10",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/5f0c6579-0bfb-4a06-8a43-1dd371499e10",
+      "description": ""
+    },
+    {
+      "title": "Research Scientist - Multimodal Agent, Consumer Devices",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/09253a0e-a2b8-49d1-80bb-6955ba3b08a3",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/09253a0e-a2b8-49d1-80bb-6955ba3b08a3",
+      "description": ""
+    },
+    {
+      "title": "Senior Software Engineer - Research Platform, Consumer Devices",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/6d9925f4-3d0a-4710-8304-032d0080d12d",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/6d9925f4-3d0a-4710-8304-032d0080d12d",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Research Developer Productivity",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/e6d5ca02-f30b-4ac5-a69d-c947efb430f9",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/e6d5ca02-f30b-4ac5-a69d-c947efb430f9",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Research - Human Data",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/openai/4d6a5951-9838-434c-830a-22cb938ea228",
+      "company": "OpenAI",
+      "job_url": "https://jobs.ashbyhq.com/openai/4d6a5951-9838-434c-830a-22cb938ea228",
+      "description": ""
+    }
+  ],
+  "DeepMind": [
+    {
+      "title": "Research Engineer, Multimodal Reasoning For Information Literacy",
+      "location": "Mountain View, California, US",
+      "apply_link": "https://job-boards.greenhouse.io/deepmind/jobs/7171371",
+      "company": "DeepMind",
+      "job_url": null,
+      "description": "Research Engineer, Multimodal Reasoning For Information Literacy Mountain View, California, US Apply Snapshot At Google DeepMind, our research team is dedicated to tackling the most complex challenges in online information quality. We strive to advance the state of the art by developing innovative solutions to detect manipulated media and misleading narratives, ensuring the integrity of digital discourse. A prominent example of our scientific discovery is Backstory . Our interdisciplinary work spans provenance analysis and the creation of tools for AI-assisted information literacy, leveraging our technologies for the widespread public benefit of a safer online environment. We thrive in a supportive environment that encourages rapid prototyping and iteration, driving our research achievements directly into Google’s flagship models, including Gemini. About us Artificial Intelligence could be one of humanity’s most useful inventions. At Google DeepMind, we’re a team of scientists, engineers, machine learning experts and more, working together to advance the state of the art in artificial intelligence. We use our technologies for widespread public benefit and scientific discovery, and collaborate with others on critical challenges, ensuring safety and ethics are the highest priority. We’re a dedicated scientific community, committed to “solving intelligence” and ensuring our technology is used for widespread public benefit. We’ve built a supportive and inclusive environment where collaboration is encouraged and learning is shared freely. We don’t set limits based on what others think is possible or impossible. We drive ourselves and inspire each other to push boundaries and achieve ambitious goals. The role To succeed in this role, you will need to be passionate about advancing information literacy using machine learning and other computational techniques. You'll join an interdisciplinary team of domain experts, ML researchers, and engineers to research and build multimodal reasoning systems and Vision-Language Models (VLMs) to assess the trustworthiness of media (images, audio, and videos) on the internet. Key responsibilities: Plan and perform rapid prototyping of computer vision and multimodal machine learning techniques applied to determining authenticity of media information. Design and train multimodal models capable of complex visual reasoning. Undertake exploratory analysis to inform experimentation and research directions. Engage with product teams to drive the development of our research. Implement tools, libraries, and frameworks to speed up and enable new research. Report and present research findings, software developments, experimental results, and data analysis clearly and efficiently. Collaborate with internal and external scientific domain experts. About you In order to set you up for success as a Research Engineer at Google DeepMind, we look for the following skills and experience: PhD/Master’s degree in Computer Science, AI, ML, or equivalent practical experience. At least 2 years of relevant experience developing computer vision techniques or multimodal machine learning models. Experience in software development using Python and deep learning frameworks (e.g., Jax, TensorFlow, PyTorch), with a proven track record of building high-quality research prototypes and systems. Quantitative skills in math and statistics. Experience exploring, analysing and visualising data. In addition, the following would be an advantage: Experience in training and deployment of large-scale models. Experience with Video Understanding Experience with Large Language Models, prompt engineering, few-shot learning, post-training techniques, and evaluations. A proven track record of research or engineering achievements, such as publications in peer-reviewed conferences or journals. When assessing technical background we will take a holistic view of the mix of scientific, ML and computational experience. We do not expect you to be an expert in all fields simultaneously. At Google DeepMind, we value diversity of experience, knowledge, backgrounds and perspectives and harness these qualities to create extraordinary impact. We are committed to equal employment opportunity regardless of sex, race, religion or belief, ethnic or national origin, disability, age, citizenship, marital, domestic or civil partnership status, sexual orientation, gender identity, pregnancy, or related condition (including breastfeeding) or any other basis as protected by applicable law. If you have a disability or additional need that requires accommodation, please do not hesitate to let us know. The US base salary range for this full-time position is between 174,000 USD - 252,000 USD + bonus + equity + benefits. Your recruiter can share more about the specific salary range for your targeted location during the hiring process. Apply for this job * indicates a required field First Name * Last Name * Email * Phone Country Phone Resume/CV * Attach Attach Dropbox Google Drive Enter manually Enter manually Accepted file types: pdf, doc, docx, txt, rtf Cover Letter Attach Attach Dropbox Google Drive Enter manually Enter manually Accepted file types: pdf, doc, docx, txt, rtf Link to external profile e.g. LinkedIn, GitHub etc. Is there anything else you'd like to add in support of your application? U.S. Standard Demographic Questions Google DeepMind is subject to certain governmental recordkeeping and reporting requirements for the administration of civil rights laws and regulations. In order to comply with these laws and achieve our goal of a diverse and inclusive workforce, Google DeepMind invites employees to voluntarily self-identify their race or ethnicity. Submission of this information is voluntary and refusal to provide it will not subject you to any adverse treatment. The information obtained will be kept confidential and may only be used in accordance with the provisions of applicable laws, executive orders, and regulations, including those that require the information to be summarized and reported to the federal government for civil rights enforcement. When reported, data will not identify any specific individual. If you'd like more information about your EEO rights as an applicant under the law, please click here https://www.eeoc.gov/employers/eeo-law-poster. How would you describe your gender identity? (mark all that apply) Select... How would you describe your racial/ethnic background? (mark all that apply) Select... How would you describe your sexual orientation? (mark all that apply) Select... Do you identify as transgender? Select... Do you have a disability or chronic condition (physical, visual, auditory, cognitive, mental, emotional, or other) that substantially limits one or more of your major life activities, including mobility, communication (seeing, hearing, speaking), and learning? Select... Are you a veteran or active member of the United States Armed Forces? Select... Voluntary Self-Identification For government reporting purposes, we ask candidates to respond to the below self-identification survey. Completion of the form is entirely voluntary. Whatever your decision, it will not be considered in the hiring process or thereafter. Any information that you do provide will be recorded and maintained in a confidential file. As set forth in DeepMind’s Equal Employment Opportunity policy, we do not discriminate on the basis of any protected group status under any applicable law. Gender Select... Are you Hispanic/Latino? Select... Race & Ethnicity Definitions If you believe you belong to any of the categories of protected veterans listed below, please indicate by making the appropriate selection. As a government contractor subject to the Vietnam Era Veterans Readjustment Assistance Act (VEVRAA), we request this information in order to measure the effectiveness of the outreach and positive recruitment efforts we undertake pursuant to VEVRAA. Classification of protected categories is as follows: A \"disabled veteran\" is one of the following: a veteran of the U.S. military, ground, naval or air service who is entitled to compensation (or who but for the receipt of military retired pay would be entitled to compensation) under laws administered by the Secretary of Veterans Affairs; or a person who was discharged or released from active duty because of a service-connected disability. A \"recently separated veteran\" means any veteran during the three-year period beginning on the date of such veteran's discharge or release from active duty in the U.S. military, ground, naval, or air service. An \"active duty wartime or campaign badge veteran\" means a veteran who served on active duty in the U.S. military, ground, naval or air service during a war, or in a campaign or expedition for which a campaign badge has been authorized under the laws administered by the Department of Defense. An \"Armed forces service medal veteran\" means a veteran who, while serving on active duty in the U.S. military, ground, naval or air service, participated in a United States military operation for which an Armed Forces service medal was awarded pursuant to Executive Order 12985. Veteran Status Select... Voluntary Self-Identification of Disability Form CC-305 Page 1 of 1 OMB Control Number 1250-0005 Expires 04/30/2026 Why are you being asked to complete this form? We are a federal contractor or subcontractor. The law requires us to provide equal employment opportunity to qualified people with disabilities. We have a goal of having at least 7% of our workers as people with disabilities. The law says we must measure our progress towards this goal. To do this, we must ask applicants and employees if they have a disability or have ever had one. People can become disabled, so we need to ask this question at least every five years. Completing this form is voluntary, and we hope that you will choose to do so. Your answer is confidential. No one who makes hiring decisions will see it. Your decision to complete the form and your answer will not harm you in any way. If you want to learn more about the law or this form, visit the U.S. Department of Labor’s Office of Federal Contract Compliance Programs (OFCCP) website at www.dol.gov/ofccp . How do you know if you have a disability? A disability is a condition that substantially limits one or more of your “major life activities.” If you have or have ever had such a condition, you are a person with a disability. Disabilities include, but are not limited to: Alcohol or other substance use disorder (not currently using drugs illegally) Autoimmune disorder, for example, lupus, fibromyalgia, rheumatoid arthritis, HIV/AIDS Blind or low vision Cancer (past or present) Cardiovascular or heart disease Celiac disease Cerebral palsy Deaf or serious difficulty hearing Diabetes Disfigurement, for example, disfigurement caused by burns, wounds, accidents, or congenital disorders Epilepsy or other seizure disorder Gastrointestinal disorders, for example, Crohn's Disease, irritable bowel syndrome Intellectual or developmental disability Mental health conditions, for example, depression, bipolar disorder, anxiety disorder, schizophrenia, PTSD Missing limbs or partially missing limbs Mobility impairment, benefiting from the use of a wheelchair, scooter, walker, leg brace(s) and/or other supports Nervous system condition, for example, migraine headaches, Parkinson’s disease, multiple sclerosis (MS) Neurodivergence, for example, attention-deficit/hyperactivity disorder (ADHD), autism spectrum disorder, dyslexia, dyspraxia, other learning disabilities Partial or complete paralysis (any cause) Pulmonary or respiratory conditions, for example, tuberculosis, asthma, emphysema Short stature (dwarfism) Traumatic brain injury Disability Status Select... PUBLIC BURDEN STATEMENT: According to the Paperwork Reduction Act of 1995 no persons are required to respond to a collection of information unless such collection displays a valid OMB control number. This survey should take about 5 minutes to complete. Submit application"
+    },
+    {
+      "title": "Research Scientist, Gemini Safety",
+      "location": "Mountain View, California, US",
+      "apply_link": "https://job-boards.greenhouse.io/deepmind/jobs/7421111",
+      "company": "DeepMind",
+      "job_url": null,
+      "description": "Research Scientist, Gemini Safety Mountain View, California, US Apply Snapshot Artificial Intelligence could be one of humanity’s most useful inventions. At Google DeepMind, we’re a team of scientists, engineers, machine learning experts and more, working together to advance the state of the art in artificial intelligence. We use our technologies for widespread public benefit and scientific discovery, and collaborate with others on critical challenges, ensuring safety and ethics are the highest priority. The Gemini Safety team is accountable for the safety and fairness behavior of GDM’s latest Gemini models. The role of the Research Scientist / Research Engineer will be to apply and develop data and algorithmic cutting edge solutions to advance GDM’s latest user-facing models. The workstyle is fast paced, and highly collaborative. The team has a strong culture of support, dedication and collaboration. About Us Artificial Intelligence could be one of humanity’s most useful inventions. At Google DeepMind, we’re a team of scientists, engineers, machine learning experts and more, working together to advance the state of the art in artificial intelligence. We use our technologies for widespread public benefit and scientific discovery, and collaborate with others on critical challenges, ensuring safety and ethics are the highest priority. The Role We’re looking for a versatile Research Scientist at ease both with figuring out how to approach new research questions, and the technical implementation of research ideas. Our team focuses on advancing the safety and fairness behavior of state of the art AI models. We drive the development of the foundational technology adopted by numerous product areas including Gemini App, Cloud API, and Search. Key responsibilities: Post-training / instruction tuning state of the art LLMs, focusing on text-to-text, image/video/audio-to-text modalities and agentic capabilities Exploring data, reasoning and algorithmic solutions to make sure Gemini Models are safe, maximally helpful, and work for everyone. Improve Gemini’s adversarial robustness, with a focus on high-stakes abuse risks. Design and maintain high quality evaluation protocols to assess model behavior gaps and headroom related to safety and fairness. Develop and execute experimental plans to address known gaps, or construct entirely new capabilities Drive innovation and enhance understanding of Supervised Fine Tuning and Reinforcement Learning fine-tuning at scale About You In order to set you up for success as a Research Scientist on the Gemini Safety team we look for the following skills and experience: PhD in Computer Science, a related field, or equivalent practical experience. Significant LLM post-training experience In addition, the following would be an advantage: Experience in Reward modeling and Reinforcement Learning for LLMs Instruction tuning Experience with Long-range Reinforcement learning Experience in areas such as Safety, Fairness and Alignment Track record of publications at NeurIPS, ICLR, ICML, RL/DL, EMNLP, AAAI, UAI Experience taking research from concept to product Experience with collaborating or leading an applied research project Experience with JAX At Google DeepMind, we value diversity of experience, knowledge, backgrounds and perspectives and harness these qualities to create extraordinary impact. We are committed to equal employment opportunity regardless of sex, race, religion or belief, ethnic or national origin, disability, age, citizenship, marital, domestic or civil partnership status, sexual orientation, gender identity, pregnancy, or related condition (including breastfeeding) or any other basis as protected by applicable law. If you have a disability or additional need that requires accommodation, please do not hesitate to let us know. Apply for this job * indicates a required field First Name * Last Name * Email * Phone Country Phone Resume/CV * Attach Attach Dropbox Google Drive Enter manually Enter manually Accepted file types: pdf, doc, docx, txt, rtf Cover Letter Attach Attach Dropbox Google Drive Enter manually Enter manually Accepted file types: pdf, doc, docx, txt, rtf LinkedIn Profile Link to external profile e.g. LinkedIn, GitHub etc. Where did you hear about this role? * Select... Submit application"
+    },
+    {
+      "title": "Research Scientist, Multimodal Alignment, Safety, and Fairness",
+      "location": "Kirkland, Washington, US; Mountain View, California, US; New York City, New York, US",
+      "apply_link": "https://job-boards.greenhouse.io/deepmind/jobs/7680885",
+      "company": "DeepMind",
+      "job_url": null,
+      "description": "Research Scientist, Multimodal Alignment, Safety, and Fairness Kirkland, Washington, US; Mountain View, California, US; New York City, New York, US Apply Snapshot We are seeking strong Research Scientists with expertise in AI research and experience in interdisciplinary sociotechnical modeling to join a multimodal safety research effort within Google DeepMind's Frontier AI unit. This role requires a passion for understanding and modeling the interactions between AI and society, a strong awareness of the AI alignment and safety landscape, and a penchant for developing novel ideas, methods, interfaces, and tools. This is a unique opportunity to contribute to impactful research and advance Google DeepMind's mission towards Artificial General Intelligence (AGI). About us Artificial Intelligence could be one of humanity’s most useful inventions. At Google DeepMind, we’re a team of scientists, engineers, machine learning experts and more, working together to advance the state of the art in artificial intelligence and ultimately achieve Artificial General Intelligence. We use our technologies for widespread public benefit and scientific discovery, and collaborate with others on critical challenges, ensuring safety and ethics are the highest priority. We’re a dedicated scientific community, committed to “solving intelligence” and ensuring our technology is used for widespread public benefit. We’ve built a supportive and inclusive environment where collaboration is encouraged and learning is shared freely. We don’t set limits based on what others think is possible or impossible. We drive ourselves and inspire each other to push boundaries and achieve ambitious goals. Our team is a part of Google DeepMind's Frontier AI unit. We have a mission to advance the frontiers of safety and inclusion in multimodal AI, build new capabilities into Google's flagship models and products, and break new ground on AI alignment. We approach alignment research with an ecosystem view, partnering across the development and deployment cycle and grounding our work in real-world impact on global users and communities. We are a research team with a mandate to invest in longer term bets and explore innovative approaches that deliver breakthrough improvements to models (Gemini) and products. Our work is at the frontier of augmented oversight for multimodal AI, and our research advances have directly impacted multiple versions of Gemini and Nano Banana models. The role We are seeking strong Research Scientists with expertise in AI research and experience in interdisciplinary sociotechnical modeling, to lead new breakthrough research directions. You will join a team working to supercharge exploration, assessment, and steering of evolving AI behaviors, with a focus on subjective and creative tasks. You will tackle the underlying research questions to improve collaborative specification of alignment objectives and assessment of adherence to desired behaviors. You will research new methods to enable AI agents to monitor real-world social context and dynamically evaluate and evolve system behaviors over long time-horizons. You’ll develop new paradigms for human+AI rating that considers systemic behaviors, adapts to human feedback, and proactively seeks context. Research Scientists at Google DeepMind lead the development of novel tools and algorithms to solve Artificial General Intelligence. Joining from top academic or industrial labs, they collaborate across fields to tackle fundamental AI questions using expertise in deep learning, computer vision, and generative architectures. This role requires independent judgment to navigate complex, ambiguous problems and explore diverse technical avenues. Your work will drive breakthroughs within GDM, Google products, and the AI alignment community. Key responsibilities Research: Generate new ideas, keep up with the state of the art in the field, discuss research directions with other researchers. Execute: Design, rapidly implement, and rigorously evaluate cutting-edge ideas, methods, interfaces, and tools to explore new sociotechnical AI systems. Communicate: Report and present research findings and developments clearly and efficiently both internally and externally, verbally and in writing. Collaborate: Suggest and engage in inter- and intra- team collaborations to meet ambitious research goals, while also driving significant individual contributions. Drive technical projects: Take ownership of substantial technical projects, from ideation and design to implementation and evaluation, often involving cross-functional collaboration. About you In order to set you up for success as a Research Scientist at Google DeepMind, we look for the following skills and experience: Requirements: PhD degree in Computer Science, Machine Learning, or a related technical field. Strong publication record in top machine learning conferences (e.g., NeurIPS, CVPR, ICML, ICLR, ICCV, ECCV). Demonstrated hands-on experience in developing multimodal AI models and systems, Strong programming skills in Python and experience with at least one major deep learning framework (e.g., JAX/Flax/Gemax) Experience conducting independent research and development, including experimental design, implementation, and analysis. In addition, the following would be an advantage: Proven expertise in working with and tuning large-scale vision language models. Experience prototyping with VLMs with modern prompting strategies Experience finetuning and post-training LLMs using RL Experience with developing agentic AI solutions to complex problems Excited to collaborate across orgs and disciplines to leverage diverse perspectives and expertise and find creative solutions. Interest and a strong awareness of the AI alignment / safety / responsibility / fairness landscape Experience with Generative AI techniques and architectures. Familiarity with Reinforcement Learning or alignment methods. Experience with multimodal learning, integrating information from different data types (e.g., vision, audio, text). The US base salary range for this full-time position is between 147,000 USD - 211,000 USD + bonus + equity + benefits. Your recruiter can share more about the specific salary range for your targeted location during the hiring process. Note: In the event your application is successful and an offer of employment is made to you, any offer of employment will be conditional on the results of a background check, performed by a third party acting on our behalf. For more information on how we handle your data, please see our Applicant and Candidate Privacy Policy . At Google DeepMind, we value diversity of experience, knowledge, backgrounds and perspectives and harness these qualities to create extraordinary impact. We are committed to equal employment opportunities regardless of sex, race, religion or belief, ethnic or national origin, disability, age, citizenship, marital, domestic or civil partnership status, sexual orientation, gender identity, pregnancy, or related condition (including breastfeeding) or any other basis as protected by applicable law. If you have a disability or additional need that requires accommodation, please do not hesitate to let us know. Apply for this job * indicates a required field First Name * Last Name * Email * Phone Country Phone Resume/CV * Attach Attach Dropbox Google Drive Enter manually Enter manually Accepted file types: pdf, doc, docx, txt, rtf Cover Letter Attach Attach Dropbox Google Drive Enter manually Enter manually Accepted file types: pdf, doc, docx, txt, rtf LinkedIn Profile Link to external profile e.g. LinkedIn, GitHub etc. Where did you hear about this role? * Select... What makes you great for this role? * Tell us about 1-2 of your recent works that are relevant to multimodal AI alignment, safety or fairness * Submit application"
+    }
+  ],
+  "X.ai": [
+    {
+      "title": "Member of Technical Staff - Ads",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/4996796007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member Of Technical Staff - Cloud Infrastructure",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5133071007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Grok Product",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5051984007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Imagine Model",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5051985007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Imagine Product",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5052027007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Imagine Safety",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5151022007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff -  Media",
+      "location": "Palo Alto, California; Seattle, Washington",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/4805874007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Mid-training",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/4965893007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Model Training",
+      "location": "Austin, Texas; New York, New York; Palo Alto, California; Seattle, Washington",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5086324007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Multimodal Understanding",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5111374007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Post-Training and RL",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5114737007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Recommendation Systems",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/4703144007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - RL Inference",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5180223007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - RL Training Framework",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5186992007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Sandbox Service",
+      "location": "London, England, United Kingdom",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5007872007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - Voice Product",
+      "location": "Palo Alto, California",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5051970007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Member of Technical Staff - X Money",
+      "location": "Tokyo, Japan",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5007310007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Analyst",
+      "location": "New York, New York",
+      "apply_link": "https://job-boards.greenhouse.io/xai/jobs/5208808007",
+      "company": "X.ai",
+      "job_url": null,
+      "description": ""
+    }
+  ],
+  "ByteDance Seed": [
+    {
+      "title": "Research Scientist in Large Language Model(Seed-LLM)",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7233349076828490043",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist in Large Language Model, Seed-Graduates- 2026 Start",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7561701031874693429",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist, Vision Foundation Model",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7362026100950321459",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist Graduate (Foundation Model, Generative AI) - 2026 Start (PhD)",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7593345683353012485",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist, Foundation Model, Speech Understanding",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7302173991929497882",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist Graduate (Foundation Model-Speech-Interaction & Learning) - 2026 Start (PhD）",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7397590567570426162",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist - Seed Multimodal Interaction and World Model",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7533299082606332168",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist Graduate- (Multimodal Interaction and World Model) - 2026 Start (PhD)",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7488465961747220744",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    },
+    {
+      "title": "Research Scientist, Responsible AI",
+      "location": "San Jose",
+      "apply_link": "https://job.toutiao.com/en/position/detail/7642760712865384709",
+      "company": "ByteDance Seed",
+      "job_url": null,
+      "description": ""
+    }
+  ],
+  "Thinking Machines": [
+    {
+      "title": "Endpoint Engineer, IT",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/b6286930-aba7-4a52-b298-53f948cd9ce8",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/b6286930-aba7-4a52-b298-53f948cd9ce8",
+      "description": ""
+    },
+    {
+      "title": "Engineering Manager",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/1161c2d5-17a1-41cb-a2c8-5558d5e42acb",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/1161c2d5-17a1-41cb-a2c8-5558d5e42acb",
+      "description": ""
+    },
+    {
+      "title": "Executive Business Partner",
+      "location": "New York",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/740ab75b-954c-46fe-9ffa-2d9ede9c135a",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/740ab75b-954c-46fe-9ffa-2d9ede9c135a",
+      "description": ""
+    },
+    {
+      "title": "Governance, Risk and Compliance Lead",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/162cac0f-7861-413f-8ffb-2df1823be067",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/162cac0f-7861-413f-8ffb-2df1823be067",
+      "description": ""
+    },
+    {
+      "title": "HR Business Partner",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/a3e5a969-33cc-44d6-932a-a8bc7c505eef",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/a3e5a969-33cc-44d6-932a-a8bc7c505eef",
+      "description": ""
+    },
+    {
+      "title": "Infrastructure Engineer, Security",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/14bef671-162c-4513-bfcf-e679e41e10a8",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/14bef671-162c-4513-bfcf-e679e41e10a8",
+      "description": ""
+    },
+    {
+      "title": "IT Engineer",
+      "location": "New York",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/8d60e5f3-222d-4f64-b640-24f40e1ab563",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/8d60e5f3-222d-4f64-b640-24f40e1ab563",
+      "description": ""
+    },
+    {
+      "title": "Network Engineer, Supercomputing",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/2c38437e-cdab-422c-9491-faaa02a3718b",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/2c38437e-cdab-422c-9491-faaa02a3718b",
+      "description": ""
+    },
+    {
+      "title": "Recruiting Coordinator, Research",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/24fdba4c-7c87-48d2-aec3-7421fd2577d2",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/24fdba4c-7c87-48d2-aec3-7421fd2577d2",
+      "description": ""
+    },
+    {
+      "title": "Reliability Engineer, Supercomputing",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/8023baca-61b5-4f7d-b145-b96881754366",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/8023baca-61b5-4f7d-b145-b96881754366",
+      "description": ""
+    },
+    {
+      "title": "Research, Audio Expertise",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/24f4c1e0-12bc-4f6c-ae7a-637ecd6bd56c",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/24f4c1e0-12bc-4f6c-ae7a-637ecd6bd56c",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Developer Experience, Tinker",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/f9f68c71-6603-4d73-a369-c5ccc51622e5",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/f9f68c71-6603-4d73-a369-c5ccc51622e5",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Infrastructure, Inference",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/4087e0f6-4295-419a-ba02-08e95a74ceea",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/4087e0f6-4295-419a-ba02-08e95a74ceea",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Infrastructure, Kernels",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/2d7a9e99-836a-475b-9ae3-b6b1df8baa6d",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/2d7a9e99-836a-475b-9ae3-b6b1df8baa6d",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Infrastructure, Numerics",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/93855db2-9a80-421d-9e80-ace9eca24650",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/93855db2-9a80-421d-9e80-ace9eca24650",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Infrastructure, RL Systems",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/c09f086c-b34b-4d34-b1fb-e5672c666dd8",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/c09f086c-b34b-4d34-b1fb-e5672c666dd8",
+      "description": ""
+    },
+    {
+      "title": "Research Engineer, Infrastructure, Training Systems",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/9dabecde-1bdb-47c6-b943-ff7b0526657c",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/9dabecde-1bdb-47c6-b943-ff7b0526657c",
+      "description": ""
+    },
+    {
+      "title": "Research, Post-Training",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/3efb6896-4840-4f90-8798-2ce49fa146e5",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/3efb6896-4840-4f90-8798-2ce49fa146e5",
+      "description": ""
+    },
+    {
+      "title": "Research, Post-Training Data",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/aa68b4e0-d079-477b-9e0e-8b8f94cd6cfc",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/aa68b4e0-d079-477b-9e0e-8b8f94cd6cfc",
+      "description": ""
+    },
+    {
+      "title": "Research, Pre-Training Data",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/27ec4240-9f70-4ebe-abc0-a7336358a9a4",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/27ec4240-9f70-4ebe-abc0-a7336358a9a4",
+      "description": ""
+    },
+    {
+      "title": "Research, Pre-Training Science",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/17e34f27-4ce8-4bf2-b9dc-83a1816e21f9",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/17e34f27-4ce8-4bf2-b9dc-83a1816e21f9",
+      "description": ""
+    },
+    {
+      "title": "Research Product Manager",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/079f3334-43ae-4ee7-9671-1dbad75dd8df",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/079f3334-43ae-4ee7-9671-1dbad75dd8df",
+      "description": ""
+    },
+    {
+      "title": "Research, Vision Expertise",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/2d72cec2-bad2-4d70-9b55-ee1dd73dc3d4",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/2d72cec2-bad2-4d70-9b55-ee1dd73dc3d4",
+      "description": ""
+    },
+    {
+      "title": "Safety Operations Lead",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/9d1124f7-7f78-4e8d-a033-568c315826eb",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/9d1124f7-7f78-4e8d-a033-568c315826eb",
+      "description": ""
+    },
+    {
+      "title": "Site Reliability Engineer (SRE)",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/c4cddfec-33de-4f67-9801-1308c2151952",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/c4cddfec-33de-4f67-9801-1308c2151952",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Data Infrastructure",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/5585b16b-32ef-4f7f-a97e-90581416e921",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/5585b16b-32ef-4f7f-a97e-90581416e921",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Developer Productivity, AI Tools",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/922c3777-64d1-468e-bb9b-aa68f3fec823",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/922c3777-64d1-468e-bb9b-aa68f3fec823",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Full Stack",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/43807be9-a5c6-44b7-b9f9-037559b6dd11",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/43807be9-a5c6-44b7-b9f9-037559b6dd11",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Full Stack, Tinker",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/32b90fb6-428f-43db-a04d-64500a35b042",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/32b90fb6-428f-43db-a04d-64500a35b042",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Platform, Tinker",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/c8427628-5315-403e-98b5-dddf2cee6063",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/c8427628-5315-403e-98b5-dddf2cee6063",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Research Acceleration",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/7fe42673-a392-4adb-a9e6-97554dd0a28d",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/7fe42673-a392-4adb-a9e6-97554dd0a28d",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Security",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/7c8b01f8-8542-4cb4-9701-5578960cda3b",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/7c8b01f8-8542-4cb4-9701-5578960cda3b",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Supercomputing",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/0046b97e-6b8d-4dde-8d11-37aed910151a",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/0046b97e-6b8d-4dde-8d11-37aed910151a",
+      "description": ""
+    },
+    {
+      "title": "Software Engineer, Systems Generalist",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/61e7846c-afc3-41a1-93f5-37642f6a72a6",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/61e7846c-afc3-41a1-93f5-37642f6a72a6",
+      "description": ""
+    },
+    {
+      "title": "Technical Sourcer",
+      "location": "San Francisco",
+      "apply_link": "https://jobs.ashbyhq.com/ThinkingMachines/0b0b63c8-79b6-4901-9861-4a7f98370d30",
+      "company": "Thinking Machines",
+      "job_url": "https://jobs.ashbyhq.com/ThinkingMachines/0b0b63c8-79b6-4901-9861-4a7f98370d30",
+      "description": ""
+    }
+  ]
+}

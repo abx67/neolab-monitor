@@ -14,7 +14,7 @@ class AnthropicScraper(JobScraper):
     def __init__(self):
         super().__init__("Anthropic", "https://www.anthropic.com/jobs")
 
-    def scrape(self) -> List[Job]:
+    def scrape(self, enrich_descriptions: bool = True) -> List[Job]:
         soup = self.fetch_page()
         if not soup:
             return []
@@ -51,4 +51,9 @@ class AnthropicScraper(JobScraper):
             jobs.append(Job(title=job_title, location=location, apply_link=apply_link, company=self.company_name))
 
         print(f"  Extracted {len(jobs)} jobs from Anthropic page")
+
+        # Fetch descriptions for filtering improvement
+        if enrich_descriptions:
+            jobs = self.enrich_with_descriptions(jobs)
+
         return jobs

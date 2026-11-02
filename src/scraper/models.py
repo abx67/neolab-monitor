@@ -13,6 +13,7 @@ class Job:
     apply_link: str
     company: str
     job_url: Optional[str] = None
+    description: str = ""
 
     def __eq__(self, other):
         if not isinstance(other, Job):
@@ -30,6 +31,7 @@ class Job:
             "apply_link": self.apply_link,
             "company": self.company,
             "job_url": self.job_url,
+            "description": self.description,
         }
 
     @classmethod
@@ -41,6 +43,7 @@ class Job:
             apply_link=data["apply_link"],
             company=data.get("company", ""),
             job_url=data.get("job_url"),
+            description=data.get("description", ""),
         )
 
 

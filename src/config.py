@@ -23,11 +23,12 @@ class Config:
 
     # Scraper
     debug_mode: bool = False
-    no_filter_companies: List[str] = field(default_factory=lambda: ["Thinking Machines"])
+    no_filter_companies: List[str] = field(default_factory=list)
     blacklist_keywords: List[str] = field(default_factory=list)
 
     # Paths
     jobs_history_file: str = "ai_jobs_history.json"
+    user_interests_file: str = "interests.json"
 
     @classmethod
     def from_env(cls) -> "Config":
@@ -63,6 +64,9 @@ class Config:
                 for kw in os.getenv("BLACKLIST_KEYWORDS", "").split(",")
                 if kw.strip()
             ],
+            user_interests_file=os.getenv(
+                "USER_INTERESTS_FILE", "interests.json"
+            ),
         )
 
     @property
