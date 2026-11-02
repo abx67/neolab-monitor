@@ -5,7 +5,7 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 from src.scraper.models import Job
-from src.filter import filter_jobs, diff_jobs, RESEARCH_KEYWORDS, BLACKLIST_KEYWORDS
+from src.filter import filter_jobs, diff_jobs, _title_matches_gate, _load_user_interests
 
 
 class TestFilterJobs:
@@ -42,10 +42,6 @@ class TestFilterJobs:
         assert "Research Engineer" in titles
         assert "ML Engineer" in titles
 
-    def test_blacklist_keyword(self):
-        jobs = [Job(title="Research Operations Manager", location="SF", apply_link="https://x.com/1", company="A")]
-        assert filter_jobs(jobs) == []
-
     def test_custom_blacklist(self):
         jobs = [
             Job(title="Research Engineer", location="SF", apply_link="https://x.com/1", company="A"),
@@ -62,8 +58,77 @@ class TestFilterJobs:
         """Short titles that don't match research keywords are filtered out."""
         jobs = [Job(title="AI", location="SF", apply_link="https://x.com/1", company="A")]
         result = filter_jobs(jobs)
-        # 'AI' doesn't match any research keyword (standalone 'ai' is not in the list)
         assert result == []
+
+    def test_description_boosts_relevance(self):
+        """A job with a strong description should pass even with soft-blacklisted title words."""
+        jobs = [
+            Job(
+                title="Research Engineer, Software",
+                location="SF",
+                apply_link="https://x.com/1",
+                company="A",
+                description="We are building reinforcement learning systems for language models. "
+                            "Experience with transformers and distributed training required.",
+            )
+        ]
+        result = filter_jobs(jobs)
+        # Title passes gate; description has strong positives
+        assert len(result) == 1
+
+    def test_hard_blacklist_excludes(self):
+        """Hard-blacklisted roles should be excluded regardless of description."""
+        jobs = [
+            Job(
+                title="Research Scientist",
+                location="SF",
+                apply_link="https://x.com/1",
+                company="A",
+                description="We are building reinforcement learning systems.",
+            )
+        ]
+        # Add a hard-blacklisted keyword via blacklist param (not hard list)
+        result = filter_jobs(jobs, blacklist=["building"])
+        # "building" is not a hard blacklist word, so this test is about custom blacklist
+        # Let's use an actual hard blacklist word
+        jobs2 = [
+            Job(
+                title="Research Scientist",
+                location="SF",
+                apply_link="https://x.com/1",
+                company="A",
+                description="Join our biology research team studying cellular processes.",
+            )
+        ]
+        result2 = filter_jobs(jobs2)
+        assert len(result2) == 0  # "biology" is in HARD_BLACKLIST
+
+    def test_user_interests_bonus(self):
+        """Jobs matching user interests with no soft-blacklist hits should be included."""
+        jobs = [
+            Job(
+                title="Research Engineer",
+                location="SF",
+                apply_link="https://x.com/1",
+                company="A",
+                description="Working on language model capabilities and evaluation.",
+            )
+        ]
+        result = filter_jobs(jobs, interests=["language model"])
+        assert len(result) == 1
+
+    def test_diff_jobs(self):
+        prev = [Job(title="Research Engineer", location="SF", apply_link="https://x.com/1", company="A")]
+        curr = prev + [Job(title="ML Engineer", location="Remote", apply_link="https://x.com/2", company="A")]
+        new, removed = diff_jobs(curr, prev)
+        assert len(new) == 1
+        assert new[0].title == "ML Engineer"
+        assert removed == []
+
+    def test_interests_file_not_found(self):
+        """Loading interests from a non-existent file should return empty list."""
+        interests = _load_user_interests("/tmp/nonexistent_neolab_interests.json")
+        assert interests == []
 
 
 class TestDiffJobs:
