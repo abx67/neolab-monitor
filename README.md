@@ -29,7 +29,7 @@ python main.py --schedule
 
 - **Multi-Company Scraping**: Anthropic, OpenAI, DeepMind, X.ai, ByteDance Seed, Thinking Machines
 - **Smart Filtering**: Research engineer/scientist positions, with configurable blacklists
-- **New Job Detection**: Persistent history via GitHub Gist (free) or local file
+- **New Job Detection**: Persistent history via GitHub repo, Gist (free) or local file
 - **Removed Job Tracking**: Know when positions are taken down
 - **Email Notifications**: Formatted HTML emails with new/removed job highlights
 - **Zero-Cost Deployment**: Runs free on Heroku with no paid addons
@@ -46,7 +46,8 @@ neolab-monitor/
 │   ├── storage/           # Storage backends
 │   │   ├── base.py        # StorageABC interface
 │   │   ├── file_storage.py
-│   │   └── gist_storage.py
+│   │   ├── gist_storage.py
+│   │   └── git_repo_storage.py
 │   ├── config.py          # Environment configuration
 │   ├── filter.py          # Job filtering logic
 │   ├── engine.py          # Orchestration
@@ -71,6 +72,9 @@ neolab-monitor/
 
 | Variable | Required | Description |
 |----------|----------|-------------|
+| `RESULTS_GIT_REPO` | No | GitHub repo (`owner/name`) to commit results to (preferred) |
+| `RESULTS_GIT_TOKEN` | No | Fine-grained PAT for the repo (falls back to `GITHUB_TOKEN`) |
+| `RESULTS_GIT_BRANCH` | No | Branch to commit to (default: `main`) |
 | `GITHUB_TOKEN` | No | GitHub token for persistent storage (creates private Gist) |
 | `GITHUB_GIST_ID` | No | Existing Gist ID (set after first run) |
 | `SENDER_EMAIL` | No | Sender email for notifications |
@@ -82,6 +86,15 @@ neolab-monitor/
 | `BLACKLIST_KEYWORDS` | No | Extra comma-separated words to exclude |
 
 Without `GITHUB_TOKEN`, the scraper uses local file storage (`ai_jobs_history.json`). This works locally but is lost on Heroku restarts.
+
+## Versioning results in a git repo
+
+The preferred persistent backend is a plain GitHub repo. Each run commits `ai_jobs_history.json` to the configured repo (one git commit per run, with the commit URL printed to the logs).
+
+- Set `RESULTS_GIT_REPO=owner/name` and `RESULTS_GIT_TOKEN` (a fine-grained PAT with `contents: write` on that repo; falls back to `GITHUB_TOKEN` if unset) and optionally `RESULTS_GIT_BRANCH` (default `main`).
+- View the latest results at `https://github.com/{repo}`, or fetch the raw JSON via the raw URL for `ai_jobs_history.json` on the configured branch.
+- Gist storage remains the fallback when `RESULTS_GIT_REPO` is not set.
+- Because state lives in the repo, results survive Heroku dyno restarts.
 
 ## Running Tests
 

@@ -13,6 +13,9 @@ class Config:
     # Storage
     github_token: Optional[str] = None
     github_gist_id: Optional[str] = None
+    git_repo: Optional[str] = None
+    git_token: Optional[str] = None
+    git_branch: str = "main"
 
     # Email
     smtp_server: str = "smtp.gmail.com"
@@ -47,11 +50,17 @@ class Config:
                 with open(token_file) as f:
                     github_token = f.read().strip()
 
+        # Git repo storage: token falls back to GITHUB_TOKEN
+        git_token = os.getenv("RESULTS_GIT_TOKEN") or os.getenv("GITHUB_TOKEN")
+
         debug_mode = os.getenv("SCRAPER_DEBUG", "").lower() in ("1", "true", "yes", "on")
 
         return cls(
             github_token=github_token,
             github_gist_id=os.getenv("GITHUB_GIST_ID"),
+            git_repo=os.getenv("RESULTS_GIT_REPO"),
+            git_token=git_token,
+            git_branch=os.getenv("RESULTS_GIT_BRANCH", "main"),
             smtp_server=os.getenv("SMTP_SERVER", "smtp.gmail.com"),
             smtp_port=int(os.getenv("SMTP_PORT", "587")),
             sender_email=os.getenv("SENDER_EMAIL"),
@@ -71,7 +80,8 @@ class Config:
 
     @property
     def storage_available(self) -> bool:
-        return self.github_token is not None
+        # git_token falls back to GITHUB_TOKEN, so this covers gist + git repo storage
+        return self.git_token is not None
 
     def validate(self) -> List[str]:
         """Return list of validation warnings. Empty list means all good."""
