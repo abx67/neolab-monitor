@@ -41,6 +41,8 @@ class EmailNotifier:
             subject_parts.append(f"({total_new} new!)")
         if total_removed:
             subject_parts.append(f"({total_removed} removed)")
+        if not total_new and not total_removed:
+            subject_parts.append("(no changes)")
         subject = " ".join(subject_parts)
 
         html = self._build_html(all_jobs, new_jobs or {}, removed_jobs or {}, report_url)
@@ -119,6 +121,13 @@ class EmailNotifier:
                         <span style="color: #c0392b;">This role no longer appears on the board.</span>
                     </div>
                     """
+            body += "</div>"
+
+        # No-changes notice (email is always sent, including unchanged runs)
+        if not total_new and not total_removed:
+            body += """<div style="background-color: #eef6fc; padding: 15px; border-radius: 5px; margin: 20px 0; border-left: 4px solid #3498db;">"""
+            body += '<h3 style="color: #2c3e50; margin-top: 0;">✅ No changes</h3>'
+            body += f'<p style="margin: 5px 0; color: #7f8c8d;">No new or removed positions since the last check — {total_jobs} positions are being tracked.</p>'
             body += "</div>"
 
         # Optional link to the latest live GitHub report

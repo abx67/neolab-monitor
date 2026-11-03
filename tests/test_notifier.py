@@ -54,3 +54,18 @@ class TestBuildHtml:
         html = self.notifier._build_html(self.all_jobs, self.new_jobs, self.removed_jobs, None)
 
         assert "View the full live report on GitHub" not in html
+
+    def test_no_changes_shows_notice_and_omits_sections(self):
+        html = self.notifier._build_html(self.all_jobs, {}, {}, REPORT_URL)
+
+        assert "✅ No changes" in html
+        assert "No new or removed positions since the last check" in html
+        assert "🆕 New Jobs" not in html
+        assert "Removed Jobs" not in html
+        # live report link still attached
+        assert f'<a href="{REPORT_URL}"' in html
+
+    def test_changes_hide_no_changes_notice(self):
+        html = self.notifier._build_html(self.all_jobs, self.new_jobs, self.removed_jobs)
+
+        assert "✅ No changes" not in html
