@@ -23,6 +23,7 @@ class GitRepoStorage(StorageABC):
         }
         self.contents_url = f"https://api.github.com/repos/{self.repo}/contents/{self.filepath}"
         self.data_api = f"https://api.github.com/repos/{self.repo}"
+        self.last_report_url: Optional[str] = None
 
     def load_previous_jobs(self) -> Dict[str, List[Dict[str, str]]]:
         try:
@@ -43,6 +44,10 @@ class GitRepoStorage(StorageABC):
         except Exception as e:
             print(f"Warning: could not load from {self.repo}: {e}")
             return {}
+
+    def get_report_url(self) -> Optional[str]:
+        """URL of the latest rendered report, or None when no report was produced."""
+        return self.last_report_url
 
     def save_jobs_history(
         self,
@@ -138,6 +143,7 @@ class GitRepoStorage(StorageABC):
             print(f"Warning: failed to update branch {self.branch} after creating commit {commit_sha}: {ref_resp.status_code} {ref_resp.text}")
             return False
 
+        self.last_report_url = f"https://github.com/{self.repo}/blob/{self.branch}/reports/{ts}.md"
         print(f"Committed job history to {self.repo} ({total} jobs)")
         print(f"Commit URL: https://github.com/{self.repo}/commit/{commit_sha}")
         return True
@@ -170,6 +176,7 @@ class GitRepoStorage(StorageABC):
 
     def _save_single_file(self, json_text: str, total: int) -> None:
         """Best-effort single-file commit of the JSON snapshot via the contents API."""
+        self.last_report_url = None
         content_b64 = base64.b64encode(json_text.encode()).decode()
 
         # Determine if the file already exists (so we include "sha" when updating)

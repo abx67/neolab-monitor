@@ -28,7 +28,7 @@ python main.py --schedule
 - **Smart Filtering**: Research engineer/scientist positions, with configurable blacklists
 - **New Job Detection**: Persistent history via GitHub repo, Gist (free) or local file
 - **Removed Job Tracking**: Know when positions are taken down
-- **Email Notifications**: Formatted HTML emails with new/removed job highlights
+- **Email Notifications**: Formatted HTML emails containing only the new/removed job highlights, plus a link to the latest live GitHub report (when using the git-repo backend)
 - **Zero-Cost Deployment**: Runs free on Heroku with no paid addons
 
 ## Project Structure

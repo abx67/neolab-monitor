@@ -109,6 +109,7 @@ class JobEngine:
         self._save(all_jobs, report_md)
 
         if send_email:
+            report_url = self.storage.get_report_url()
             new_jobs_by_company = {
                 c: d.new_jobs for c, d in diff_result.items() if d.new_jobs
             }
@@ -118,7 +119,7 @@ class JobEngine:
             if new_jobs_by_company or removed_jobs_by_company:
                 from src.notifier import EmailNotifier
                 notifier = EmailNotifier(self.config)
-                notifier.send(all_jobs, new_jobs_by_company or None, removed_jobs_by_company or None)
+                notifier.send(all_jobs, new_jobs_by_company or None, removed_jobs_by_company or None, report_url)
 
     # ── internals ───────────────────────────────────────────────────────
 

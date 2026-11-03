@@ -96,6 +96,9 @@ class TestGitRepoStorageWithReport:
     def setup_method(self):
         self.storage = GitRepoStorage("xj3048/frontierlab-jobs", "test-token")
 
+    def test_get_report_url_initially_none(self):
+        assert self.storage.get_report_url() is None
+
     def test_save_with_report_happy_path(self, capsys):
         with patch("src.storage.git_repo_storage.requests") as mock_requests:
             mock_requests.get.return_value = _resp(200, {"object": {"sha": "HEAD123"}})
@@ -159,6 +162,12 @@ class TestGitRepoStorageWithReport:
         assert re.fullmatch(
             r"Update job history \(1 jobs\) \+ run report \d{4}-\d{2}-\d{2}_\d{4}",
             commit_payload["message"],
+        )
+
+        # latest report URL is tracked, matching the ts in the commit message
+        ts = re.search(r"run report (\d{4}-\d{2}-\d{2}_\d{4})", commit_payload["message"]).group(1)
+        assert self.storage.get_report_url() == (
+            f"https://github.com/xj3048/frontierlab-jobs/blob/main/reports/{ts}.md"
         )
 
         out = capsys.readouterr().out
@@ -225,6 +234,8 @@ class TestGitRepoStorageWithReport:
         assert put_payload["sha"] == "abc123"
         decoded = json.loads(base64.b64decode(put_payload["content"]))
         assert decoded["job_history"] == JOBS
+        # ref-update failure means no report was committed → no report URL
+        assert self.storage.get_report_url() is None
 
     def test_save_without_report_uses_single_file_path(self, capsys):
         with patch("src.storage.git_repo_storage.requests") as mock_requests:
@@ -236,3 +247,5 @@ class TestGitRepoStorageWithReport:
         mock_requests.put.assert_called_once()
         out = capsys.readouterr().out
         assert "Committed job history to xj3048/frontierlab-jobs (1 jobs)" in out
+        # no report produced → no report URL
+        assert self.storage.get_report_url() is None

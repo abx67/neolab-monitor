@@ -22,6 +22,7 @@ class EmailNotifier:
         all_jobs: Dict[str, List[Job]],
         new_jobs: Optional[Dict[str, List[Job]]] = None,
         removed_jobs: Optional[Dict[str, List[Job]]] = None,
+        report_url: Optional[str] = None,
     ) -> bool:
         if not self.config.email_configured:
             print("  Email configuration incomplete — skipping notification.")
@@ -42,7 +43,7 @@ class EmailNotifier:
             subject_parts.append(f"({total_removed} removed)")
         subject = " ".join(subject_parts)
 
-        html = self._build_html(all_jobs, new_jobs or {}, removed_jobs or {})
+        html = self._build_html(all_jobs, new_jobs or {}, removed_jobs or {}, report_url)
 
         msg = MIMEMultipart("alternative")
         msg["Subject"] = subject
@@ -66,6 +67,7 @@ class EmailNotifier:
         all_jobs: Dict[str, List[Job]],
         new_jobs: Dict[str, List[Job]],
         removed_jobs: Dict[str, List[Job]],
+        report_url: Optional[str] = None,
     ) -> str:
         total_jobs = sum(len(jobs) for jobs in all_jobs.values())
         total_new = sum(len(jobs) for jobs in new_jobs.values())
@@ -119,18 +121,9 @@ class EmailNotifier:
                     """
             body += "</div>"
 
-        # All jobs section
-        body += '<h3 style="color: #2c3e50;">All Research Engineer Positions</h3>'
-        for company, jobs in all_jobs.items():
-            if not jobs:
-                continue
-            body += f'<h4 style="color: #2c3e50; margin: 25px 0 15px 0; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">{company} — {len(jobs)} positions</h4>'
-            new_titles = {j.title for j in new_jobs.get(company, [])}
-            for i, job in enumerate(jobs, 1):
-                is_new = job.title in new_titles
-                border = "#27ae60" if is_new else "#3498db"
-                indicator = " 🆕" if is_new else ""
-                body += self._job_card_html(job, border_color=border, index=i, indicator=indicator)
+        # Optional link to the latest live GitHub report
+        if report_url:
+            body += f'<p style="margin: 20px 0;"><a href="{report_url}" style="color: #3498db; font-weight: bold;">📊 View the full live report on GitHub →</a></p>'
 
         body += f"""
             <hr style="margin: 30px 0; border: none; border-top: 1px solid #bdc3c7;">

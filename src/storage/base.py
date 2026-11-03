@@ -30,3 +30,7 @@ class StorageABC(ABC):
                 Backends may ignore report_md (e.g. file/gist backends).
         """
         ...
+
+    def get_report_url(self) -> Optional[str]:
+        """URL of the latest rendered report (backends without one return None)."""
+        return None
