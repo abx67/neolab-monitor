@@ -12,6 +12,7 @@ RESEARCH_KEYWORDS = [
     "research scientist / engineer",
     "machine learning engineer",
     "ml engineer",
+    "model engineer",
     "research manager",
     "staff research engineer",
     "senior research engineer",

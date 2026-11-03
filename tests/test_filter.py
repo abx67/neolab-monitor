@@ -21,6 +21,13 @@ class TestFilterJobs:
         jobs = [Job(title="ML Engineer", location="Remote", apply_link="https://x.com/3", company="A")]
         assert filter_jobs(jobs) == jobs
 
+    def test_model_engineer_included(self):
+        jobs = [
+            Job(title="Model Engineer, Imagine", location="Remote", apply_link="https://x.com/5", company="X.ai"),
+            Job(title="Sr. Model Engineer, Model Training", location="Palo Alto", apply_link="https://x.com/6", company="X.ai"),
+        ]
+        assert filter_jobs(jobs) == jobs
+
     def test_recruiter_excluded(self):
         jobs = [Job(title="Recruiter", location="NY", apply_link="https://x.com/1", company="A")]
         assert filter_jobs(jobs) == []
