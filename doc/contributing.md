@@ -17,8 +17,6 @@ neolab-monitor/
 ├── pyproject.toml          # uv project definition (dependencies)
 ├── uv.lock                 # Locked dependency versions
 ├── .python-version         # Pinned Python version (3.12)
-├── requirements.txt        # pip fallback (production dependencies)
-├── requirements-test.txt   # pip fallback (test dependencies)
 └── Procfile               # Heroku worker config
 ```
 

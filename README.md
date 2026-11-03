@@ -5,11 +5,8 @@ A Python scraper that monitors AI research engineer job postings from six leadin
 ## Quick Start
 
 ```bash
-# Install dependencies (uv recommended; creates .venv + uv.lock)
+# Install dependencies (creates .venv + uv.lock)
 uv sync
-
-# Alternative: install with pip
-pip install -r requirements.txt
 
 # Configure environment
 cp .env.example .env
@@ -62,8 +59,6 @@ neolab-monitor/
 ├── pyproject.toml          # uv project definition (dependencies)
 ├── uv.lock                 # Locked dependency versions
 ├── .python-version         # Pinned Python version (3.12)
-├── requirements.txt        # pip fallback (production dependencies)
-├── requirements-test.txt   # pip fallback (test dependencies)
 ├── Procfile               # Heroku worker config
 └── .env.example
 ```
@@ -103,7 +98,6 @@ uv run pytest tests/ -v
 ```
 
 `uv sync` installs both the runtime and dev (test) dependencies into `.venv`.
-Alternatively, with pip: `pip install -r requirements-test.txt && python -m pytest tests/ -v`.
 
 ## Deployment
 

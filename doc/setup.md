@@ -31,17 +31,6 @@ uv run python main.py --schedule
 uv run pytest tests/ -v
 ```
 
-<details>
-<summary>Prefer pip?</summary>
-
-```bash
-pip install -r requirements.txt
-pip install -r requirements-test.txt
-python main.py
-python -m pytest tests/ -v
-```
-</details>
-
 ## Heroku Deployment
 
 ### Step 1: Create a GitHub Gist Token
