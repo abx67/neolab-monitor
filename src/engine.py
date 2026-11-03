@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 from src.config import Config
 from src.scraper.models import Job, DiffResult
@@ -14,6 +14,7 @@ from src.scraper.scrapers.thinking_machines import ThinkingMachinesScraper
 from src.scraper.scrapers.xai import XAIScraper
 from src.storage.base import StorageABC
 from src.filter import filter_jobs, diff_jobs
+from src.report import render_run_report
 
 
 class JobEngine:
@@ -104,7 +105,8 @@ class JobEngine:
             print(f"  ❎ {total_removed} position(s) removed since last check.")
 
         self._display_results(all_jobs, diff_result)
-        self._save(all_jobs)
+        report_md = render_run_report(all_jobs, diff_result)
+        self._save(all_jobs, report_md)
 
         if send_email:
             new_jobs_by_company = {
@@ -145,10 +147,10 @@ class JobEngine:
                     print(f"     🔗 Apply: {job.apply_link}")
             print()
 
-    def _save(self, all_jobs: Dict[str, List[Job]]) -> None:
+    def _save(self, all_jobs: Dict[str, List[Job]], report_md: Optional[str]) -> None:
         serialized: Dict[str, List[Dict[str, str]]] = {}
         for company, jobs in all_jobs.items():
             serialized[company] = [j.to_dict() for j in jobs]
-        self.storage.save_jobs_history(serialized)
+        self.storage.save_jobs_history(serialized, report_md)
         total = sum(len(j) for j in serialized.values())
         print(f"\n  💾 Saved {total} jobs to storage")

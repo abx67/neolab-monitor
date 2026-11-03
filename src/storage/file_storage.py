@@ -2,7 +2,7 @@
 
 import json
 import os
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 from src.storage.base import StorageABC
 
@@ -23,7 +23,7 @@ class FileStorage(StorageABC):
             print(f"Warning: could not load history from {self.filepath}: {e}")
             return {}
 
-    def save_jobs_history(self, jobs: Dict[str, List[Dict[str, str]]]) -> None:
+    def save_jobs_history(self, jobs: Dict[str, List[Dict[str, str]]], report_md: Optional[str] = None) -> None:
         try:
             with open(self.filepath, "w", encoding="utf-8") as f:
                 json.dump(jobs, f, indent=2, ensure_ascii=False)

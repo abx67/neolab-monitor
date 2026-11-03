@@ -84,10 +84,11 @@ Without `GITHUB_TOKEN`, the scraper uses local file storage (`ai_jobs_history.js
 
 ## Versioning results in a git repo
 
-The preferred persistent backend is a plain GitHub repo. Each run commits `ai_jobs_history.json` to the configured repo (one git commit per run, with the commit URL printed to the logs).
+The preferred persistent backend is a plain GitHub repo. Each run creates **one git commit** containing both the machine-readable `ai_jobs_history.json` snapshot and a rendered markdown report under `reports/` (the commit URL is printed to the logs).
 
 - Set `RESULTS_GIT_REPO=owner/name` and `RESULTS_GIT_TOKEN` (a fine-grained PAT with `contents: write` on that repo; falls back to `GITHUB_TOKEN` if unset) and optionally `RESULTS_GIT_BRANCH` (default `main`).
-- View the latest results at `https://github.com/{repo}`, or fetch the raw JSON via the raw URL for `ai_jobs_history.json` on the configured branch.
+- To track the latest results, open the newest commit at `https://github.com/{repo}/commits`, or browse the `reports/` directory on the configured branch for the human-readable markdown report; fetch the raw JSON via the raw URL for `ai_jobs_history.json`.
+- `FileStorage` and GitHub Gist storage backends persist only the JSON snapshot — they ignore the rendered report.
 - Gist storage remains the fallback when `RESULTS_GIT_REPO` is not set.
 - Because state lives in the repo, results survive Heroku dyno restarts.
 

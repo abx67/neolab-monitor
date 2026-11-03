@@ -49,7 +49,7 @@ class GistStorage(StorageABC):
             print(f"Warning: could not load from Gist: {e}")
             return {}
 
-    def save_jobs_history(self, jobs: Dict[str, List[Dict[str, str]]]) -> None:
+    def save_jobs_history(self, jobs: Dict[str, List[Dict[str, str]]], report_md: Optional[str] = None) -> None:
         data = {
             "job_history": jobs,
             "last_updated": __import__("datetime").datetime.now().isoformat(),
