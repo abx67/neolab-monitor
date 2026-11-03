@@ -81,7 +81,7 @@ uses its own HTTP client session with appropriate headers.
 |---------|--------|--------|
 | Anthropic | greenhouse.io | HTML parsing |
 | OpenAI | ashbyhq.com | JSON from `window.__appData` |
-| DeepMind | greenhouse.io API | JSON API |
+| DeepMind | Google's careers platform (careers.google.com) | HTML-embedded JSON records |
 | X.ai | greenhouse.io API | JSON API |
 | ByteDance Seed | seed.bytedance.com | Multi-page HTML |
 | Thinking Machines | ashbyhq.com | JSON from `window.__appData` |
