@@ -1,110 +1,96 @@
-"""ByteDance Seed job scraper - scrapes multiple team pages."""
+"""ByteDance Seed job scraper - Seed's JSON API.
 
-import re
+Seed's team pages (seed.bytedance.com/en/direction/*) are a JS-rendered
+React app, so the static HTML is no longer parseable. Instead, the app
+calls a plain JSON API (no auth/cookies required) that returns all
+open jobs in a single call:
+
+    GET https://seed.bytedance.com/api/get_job_list_v2
+
+Each record carries parallel English (``SubJobEn``) and Chinese
+(``SubJobZh``) sub-objects; English fields are preferred, with Chinese
+as fallback. Records whose external links are empty fall back to a
+link built from the ``JobMeta.Position`` id.
+"""
+
 from typing import List
 
-from bs4 import BeautifulSoup
+import requests
+
 from src.scraper.base import JobScraper
 from src.scraper.models import Job
 
+_USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+
 
 class SeedScraper(JobScraper):
-    """Scraper for ByteDance Seed jobs from their team pages."""
-
-    TEAM_PAGES = [
-        "https://seed.bytedance.com/en/direction/llm",
-        "https://seed.bytedance.com/en/direction/vision",
-        "https://seed.bytedance.com/en/direction/speech",
-        "https://seed.bytedance.com/en/direction/multimodal",
-        "https://seed.bytedance.com/en/direction/ai_for_science",
-        "https://seed.bytedance.com/en/direction/robotics",
-        "https://seed.bytedance.com/en/direction/infrastructures",
-        "https://seed.bytedance.com/en/direction/responsible_ai",
-    ]
-
-    LOCATION_PATTERNS = [
-        "San Jose", "Seattle", "Singapore", "Beijing", "Shanghai",
-        "Palo Alto", "New York", "London", "Tokyo", "San Francisco",
-    ]
-
-    EMPLOYMENT_TYPES = ["Experienced Hiring", "Campus Recruitment", "Internship"]
+    """Scraper for ByteDance Seed jobs via Seed's JSON API."""
 
     def __init__(self):
-        super().__init__("ByteDance Seed", "https://seed.bytedance.com/en/career")
+        super().__init__(
+            "ByteDance Seed",
+            "https://seed.bytedance.com/api/get_job_list_v2",
+        )
 
     def scrape(self) -> List[Job]:
-        all_jobs: List[Job] = []
+        """Fetch jobs from Seed's job list API."""
+        try:
+            print(f"  Fetching {self.company_name} jobs from Seed API...")
+            response = requests.get(
+                self.base_url,
+                headers={"User-Agent": _USER_AGENT},
+                timeout=20,
+            )
+            response.raise_for_status()
+            data = response.json()
+        except requests.RequestException as e:
+            print(f"  Error fetching jobs from {self.company_name}: {e}")
+            return []
+        except ValueError as e:
+            print(f"  Unexpected error parsing {self.company_name} response: {e}")
+            return []
 
-        for team_url in self.TEAM_PAGES:
-            try:
-                print(f"  Scraping {self.company_name} team page: {team_url}")
-                response = self.session.get(team_url, timeout=10)
-                response.raise_for_status()
-                soup = BeautifulSoup(response.content, "html.parser")
-                jobs = self._extract_jobs_from_page(soup, team_url)
-                all_jobs.extend(jobs)
-            except Exception as e:
-                print(f"  Error scraping {team_url}: {e}")
-                continue
+        base_resp = data.get("BaseResp") or {}
+        if base_resp.get("StatusCode", 0) != 0:
+            print(
+                f"  Warning: {self.company_name} API returned StatusCode "
+                f"{base_resp.get('StatusCode')} ({base_resp.get('StatusMessage', '')})"
+            )
+            return []
 
-        # Deduplicate by apply_link
-        seen: set[str] = set()
-        unique_jobs: List[Job] = []
-        for job in all_jobs:
-            if job.apply_link not in seen:
-                unique_jobs.append(job)
-                seen.add(job.apply_link)
+        try:
+            jobs: List[Job] = []
+            for record in data.get("job_list", []):
+                job_meta = record.get("JobMeta") or {}
+                status = job_meta.get("Status")
+                if status is not None and status != 2:
+                    continue  # closed/inactive position
 
-        print(f"  Found {len(unique_jobs)} unique jobs from {self.company_name}")
-        return unique_jobs
+                sub_en = record.get("SubJobEn") or {}
+                sub_zh = record.get("SubJobZh") or {}
 
-    def _extract_jobs_from_page(self, soup: BeautifulSoup, team_url: str) -> List[Job]:
-        jobs: List[Job] = []
-        job_links = soup.find_all("a", href=True)
+                title = (sub_en.get("JobName") or "").strip() or (sub_zh.get("JobName") or "").strip()
+                if not title:
+                    continue
 
-        for link in job_links:
-            href = str(link.get("href", "") or "")
-            if "job.toutiao.com" not in href and "jobs.toutiao.com" not in href:
-                continue
-            if "/position/" not in href:
-                continue
+                location = (sub_en.get("City") or "").strip() or (sub_zh.get("City") or "").strip()
+                apply_link = (sub_en.get("ExternalLink") or "").strip() or (sub_zh.get("ExternalLink") or "").strip()
+                if not apply_link:
+                    position = job_meta.get("Position")
+                    if position:
+                        apply_link = f"https://jobs.bytedance.com/experienced/position/{position}/detail"
+                if not apply_link:
+                    continue
 
-            job_text = link.get_text(strip=True)
-            if not job_text or "Apply Now" not in job_text:
-                continue
-
-            job_info = job_text.replace("Apply Now", "").strip()
-            title = job_info
-            location = ""
-
-            for loc_pattern in self.LOCATION_PATTERNS:
-                if loc_pattern in job_info:
-                    parts = job_info.split(loc_pattern)
-                    if len(parts) >= 2:
-                        title = parts[0].strip()
-                        location = loc_pattern
-                        remaining = parts[1].strip()
-                        if remaining and not any(
-                            emp in remaining.lower() for emp in ["experienced", "campus", "internship"]
-                        ):
-                            location += remaining.split()[0] if remaining.split() else ""
-                        break
-
-            for emp_type in self.EMPLOYMENT_TYPES:
-                title = title.replace(emp_type, "").strip()
-
-            apply_url = href
-            if apply_url.startswith("http://"):
-                apply_url = apply_url.replace("http://", "https://")
-            elif not apply_url.startswith("https://"):
-                apply_url = "https://" + apply_url.lstrip("/")
-
-            if title and apply_url:
                 jobs.append(Job(
                     title=title,
-                    location=location or "Multiple Locations",
-                    apply_link=apply_url,
+                    location=location,
+                    apply_link=apply_link,
                     company=self.company_name,
                 ))
+        except Exception as e:
+            print(f"  Unexpected error scraping {self.company_name}: {e}")
+            return []
 
+        print(f"  Found {len(jobs)} jobs from {self.company_name}")
         return jobs

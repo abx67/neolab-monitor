@@ -26,7 +26,7 @@ class Config:
 
     # Scraper
     debug_mode: bool = False
-    no_filter_companies: List[str] = field(default_factory=lambda: ["Thinking Machines"])
+    no_filter_companies: List[str] = field(default_factory=lambda: ["Thinking Machines", "ByteDance Seed"])
     blacklist_keywords: List[str] = field(default_factory=list)
 
     # Paths
